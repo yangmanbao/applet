@@ -1,0 +1,1 @@
+"/Applications/wechatwebdevtools.app/Contents/MacOS/cli" cloud functions deploy --e cloud1-0genxfp5e13aaf94 --n quickstartFunctions --r --project "/Users/fangjunkai/OneDrive/work/project/wechartproject/temp003" --report_first --report

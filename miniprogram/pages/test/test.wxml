@@ -1,0 +1,17 @@
+<!--pages/test/test.wxml-->
+<!-- 轮播图 -->
+<swiper indicator-dots circular>
+  <swiper-item wx:for="{{swiperList }}" wx:key="id">
+    <image src="{{item.image}}"></image>
+  </swiper-item>
+</swiper>
+<view class="grid-list">
+  <view class="grid-item" wx:for="{{gridList}}" wx:key="id">
+    <image src="{{item.icon}}"></image>
+    <text>{{item.name}}</text>
+  </view>
+</view>
+<view class="image-box">
+  <image src="/images/tabbar/bug_line.png" mode="heightFix"></image>
+  <image src="/images/tabbar/bug_line.png" mode="heightFix"></image>
+</view>

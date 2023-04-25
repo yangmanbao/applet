@@ -1,0 +1,18 @@
+<!--pages/user/user.wxml-->
+<view class="all-view" style="flex-direction:column;">
+    <view class="user-view" id="id-user-view1">
+		<block  class="mine-userinfo">
+			<view class="mine-userinfo-left">
+				<button class="mine-nouserinfo-avatar-btn" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" style="background-image:url({{userInfo.avatarUrl}}); background-repeat:no-repeat; background-size:100% 100%" size="mini">>按钮</button>
+			</view>
+			<view class="mine-nouserinfo-msg" wx:if="{{!isLogin}}">
+				<text class="mine-userinfo-name">请授权登陆</text>
+			</view>
+            <view class="mine-nouserinfo-msg" wx:if="{{isLogin}}">
+				<text class="mine-userinfo-name">{{userInfo.nickName}}</text>
+			</view>
+		</block>
+    </view>
+    <view class="user-view" id="id-user-view2"></view>
+    <view class="user-view" id="id-user-view3"></view>
+</view>

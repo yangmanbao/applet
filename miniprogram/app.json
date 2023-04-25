@@ -1,0 +1,45 @@
+{
+  "pages":[
+    "pages/test2/test2",
+    "pages/home/home",
+    "pages/shop/shop",
+    "pages/user/user",
+    "pages/test/test",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#ffffff", 
+    "navigationBarTitleText": "26模型", 
+    "backgroundTextStyle":"light",
+    "navigationBarTextStyle":"black" 
+  },
+"tabBar": {
+  "list": [{
+    "pagePath": "pages/home/home",
+    "text": "首页",
+    "iconPath": "images/tabbar/college_line_.png",
+    "selectedIconPath": "images/tabbar/college_line.png"
+  },
+  {
+    "pagePath": "pages/shop/shop",
+    "text": "交易",
+    "iconPath": "images/tabbar/computer_line_.png",
+    "selectedIconPath": "images/tabbar/computer_line.png"
+  },
+  {
+    "pagePath": "pages/user/user",
+    "text": "我的",
+    "iconPath": "images/tabbar/emoji_line_.png",
+    "selectedIconPath": "images/tabbar/emoji_line.png"
+  },
+  {
+    "pagePath": "pages/test2/test2",
+    "text": "测试",
+    "iconPath": "images/tabbar/bug_line_.png",
+    "selectedIconPath": "images/tabbar/bug_line.png"
+  }]
+  
+},
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
