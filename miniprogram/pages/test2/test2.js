@@ -12,7 +12,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    wx.cloud.callFunction({
+        name: 'User',
+        data:{
+            type: 'test'
+        },
+        complete: res => {
+          console.log('callFunction User result: ', res)
+        }
+      })
   },
 
   /**

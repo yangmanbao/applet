@@ -16,14 +16,23 @@ Page({
     userInfo: e.detail.userInfo,
     isLogin: 1
    })
+   wx.cloud.callFunction({
+    name: 'User',
+    data:{
+        type: 'login',
+        userinfo: this.data.userInfo,
+    },
+    complete: res => {
+      console.log('callFunction User result: ', res)
+    }
+  })
   },
 
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
-
+ onLoad () {
   },
 
   /**
