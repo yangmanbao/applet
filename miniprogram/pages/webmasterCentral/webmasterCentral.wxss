@@ -1,0 +1,31 @@
+/* pages/webmasterCentral/webmasterCentral.wxss */
+.mainPage{
+    /* height: 100%; */
+    /* display: flex; */
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: space-between; */
+    padding: 50rpx 0;
+    box-sizing: border-box;
+    background-color: #F6F9FE;
+    height: 1207rpx;
+}
+.webmasterText{
+    margin:30rpx;
+    margin-bottom: 20px;
+    font-size: large;
+    color:#2E3E63
+}
+.webmaster{
+    display: flex;
+    margin:30rpx;
+    width: 90%;
+    height:150rpx;
+    border-radius: 15px;
+    background-color:#FCFEFF ;
+}
+
+.webmasterBtn{
+
+    margin: 35rpx;
+}

@@ -1,0 +1,21 @@
+<!--pages/webmasterCentral/webmasterCentral.wxml-->
+<view class="mainPage">
+    <view class="webmaster1">
+        <view class="webmasterText">品牌管理</view>
+        <view class="webmaster">
+            <van-button round type="default" color="#ADB7CA" class="webmasterBtn" size="normal" bind:click="brandManage"><view style="color: #343F57;">品牌管理</view></van-button>
+        </view>
+    </view>
+    <view class="webmaster1">
+        <view class="webmasterText">管理员管理</view>
+        <view class="webmaster">
+            <van-button round type="default" color="#ADB7CA" class="webmasterBtn" size="normal" bind:click="manager"><view style="color: #343F57;">管理员管理</view></van-button>
+        </view>
+    </view>
+    <view class="webmaster1">
+        <view class="webmasterText">小黑屋</view>
+        <view class="webmaster">
+            <van-button  round type="default" color="#ADB7CA" class="webmasterBtn" size="normal" bind:click="blackList"><view style="color: #343F57;">小黑屋管理</view></van-button>
+        </view>
+    </view>
+</view>

@@ -1,12 +1,17 @@
 // pages/user/user.js
+const app = getApp()
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
     userInfo: {},
-    isLogin: 0
+    isLogin: 0,
+    active:1,
+    navBarHeight: app.globalData.navBarHeight,
+    menuRight: app.globalData.menuRight,
+    menuBottom: app.globalData.menuBottom,
+    menuHeight: app.globalData.menuHeight,
   },
   bindGetUserInfo:function(e){
    console.log("get user info btn clicked")
@@ -27,8 +32,18 @@ Page({
     }
   })
   },
-
-
+  onChange(event) {
+    wx.showToast({
+      title: `切换到标签 ${event.detail.title}`,
+      icon: 'none',
+    });
+  },
+  //点击导航栏设置按钮，进入新页面
+  changePersonPage(){
+    wx.navigateTo({ 
+        url: '/pages/webmasterCentral/webmasterCentral'
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

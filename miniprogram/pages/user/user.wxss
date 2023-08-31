@@ -5,18 +5,25 @@
     width: 100%;
 }
 
-.user-view{
+.user-view1{
     height: 250rpx;
-    width: 80%;
-    margin-top: 50rpx;
-    margin-left: 10%;
-    margin-right: 10%;
-    border-radius: 8px;
+    width: 100%;
 }
 #id-user-view1{
-    display: flex;
+    display: flex
   }
-  
+  .mine-userinfo-name,
+  .mine-userinfo-name1{
+    font-size: 45rpx;
+    color: white;
+  }
+  .mine-userinfo-name1{
+    margin-top: 20%;
+  }
+  .mine-userinfo-msg{
+    font-size: 30rpx;
+    color: white;
+  }
   .no_userinfo{
     width: 144rpx;
     height: 144rpx;
@@ -61,7 +68,20 @@
     justify-content: space-around;
     margin-top: -40rpx;
   }
+.user-view2{
+    height: 800rpx;
+}
+.detailCard{
+    width: 200rpx;
+    height: 300rpx;
+    border-radius: 10rpx;
+    margin:10rpx;
+}
 
-#id-user-view2{
-    background-color: red;
+.detailCardText{
+    width: auto;
+    height: 70rpx;
+    font-size: small;
+    background-color: white;
+    margin-top: -10rpx;
 }

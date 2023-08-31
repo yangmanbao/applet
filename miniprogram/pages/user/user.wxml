@@ -1,18 +1,159 @@
 <!--pages/user/user.wxml-->
-<view class="all-view" style="flex-direction:column;">
-    <view class="user-view" id="id-user-view1">
-		<block  class="mine-userinfo">
-			<view class="mine-userinfo-left">
-				<button class="mine-nouserinfo-avatar-btn" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" style="background-image:url({{userInfo.avatarUrl}}); background-repeat:no-repeat; background-size:100% 100%" size="mini">>按钮</button>
-			</view>
-			<view class="mine-nouserinfo-msg" wx:if="{{!isLogin}}">
-				<text class="mine-userinfo-name">请授权登陆</text>
-			</view>
-            <view class="mine-nouserinfo-msg" wx:if="{{isLogin}}">
-				<text class="mine-userinfo-name">{{userInfo.nickName}}</text>
-			</view>
-		</block>
+
+<view class="all-view" style="flex-direction:column; background-color:#4098fc;">
+    <!-- 自定义导航栏 -->
+    <view class="nav-bar" style="height:{{navBarHeight}}px">
+        <view class="title" style="height:{{menuHeight}}px;bottom:{{menuBottom}}px;line-height:{{menuHeight}}px;display: flex;" wx:if="{{isLogin}}">
+            <van-icon name="setting-o" size="25px" style="margin-top:13px;margin-left: 5px;" bind:click="changePersonPage" />
+            <view style="margin-left: 246rpx;margin-top: 10rpx;">个人中心</view>
+        </view>
     </view>
-    <view class="user-view" id="id-user-view2"></view>
-    <view class="user-view" id="id-user-view3"></view>
+    <!-- 登录后的页面 -->
+    <view class="user-view1" id="id-user-view1">
+        <block class="mine-userinfo">
+            <view class="mine-userinfo-left">
+                <button class="mine-nouserinfo-avatar-btn" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" style="background-image:url({{userInfo.avatarUrl}}); background-repeat:no-repeat; background-size:100% 100%" size="mini">>按钮</button>
+            </view>
+            <view class="mine-nouserinfo-msg" wx:if="{{!isLogin}}">
+                <text class="mine-userinfo-name">请授权登陆</text>
+            </view>
+            <view class="mine-nouserinfo-msg" wx:if="{{isLogin}}">
+                <text class="mine-userinfo-name1">{{userInfo.nickName}}</text>
+                <text class="mine-userinfo-msg">分享恐龙陪伴时光</text>
+            </view>
+        </block>
+    </view>
+    <view class="user-view2" wx:if="{{isLogin}}">
+        <van-tabs active="{{ active }}" bind:change="onChange">
+            <scroll-view style="background-color: #F4F5F7;height: 743rpx;" scroll-y>
+                <van-tab title="我的想入">
+                    <van-row gutter="20">
+                        <view>
+                            <van-col span="8">
+                                <view class="detailCard">
+                                    <van-image width="6.3rem" height="7rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                                    <view class="detailCardText">霸王龙威尔逊</view>
+                                </view>
+                            </van-col>
+                        </view>
+                        <van-col span="8">
+                            <view class="detailCard">
+                                <van-image width="6.3rem" height="7rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                                <view class="detailCardText">霸王龙威尔逊</view>
+                            </view>
+                        </van-col>
+                        <van-col span="8">
+                            <view class="detailCard">
+                                <van-image width="6.3rem" height="7rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                                <view class="detailCardText">霸王龙威尔逊</view>
+                            </view>
+
+                        </van-col>
+                        <van-col span="8">
+                            <view class="detailCard">
+                                <van-image width="6.3rem" height="7rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                                <view class="detailCardText">霸王龙威尔逊</view>
+                            </view>
+                        </van-col>
+                        <van-col span="8">
+                            <view class="detailCard">
+                                <van-image width="6.3rem" height="7rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                                <view class="detailCardText">霸王龙威尔逊</view>
+                            </view>
+                        </van-col>
+                        <van-col span="8">
+                            <view class="detailCard">
+                                <van-image width="6.3rem" height="7rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                                <view class="detailCardText">霸王龙威尔逊</view>
+                            </view>
+
+                        </van-col>
+                        <van-col span="8">
+                            <view class="detailCard">
+                                <van-image width="6.3rem" height="7rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                                <view class="detailCardText">霸王龙威尔逊</view>
+                            </view>
+                        </van-col>
+                        <van-col span="8">
+                            <view class="detailCard">
+                                <van-image width="6.3rem" height="7rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                                <view class="detailCardText">霸王龙威尔逊</view>
+                            </view>
+                        </van-col>
+                        <van-col span="8">
+                            <view class="detailCard">
+                                <van-image width="6.3rem" height="7rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                                <view class="detailCardText">霸王龙威尔逊</view>
+                            </view>
+
+                        </van-col>
+                    </van-row>
+                </van-tab>
+                <van-tab title="我的已入">
+                    <van-row gutter="20">
+                        <view>
+                            <van-col span="8">
+                                <view class="detailCard">
+                                    <van-image width="6.3rem" height="7rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                                    <view class="detailCardText">霸王龙威尔逊</view>
+                                </view>
+                            </van-col>
+                        </view>
+
+                        <van-col span="8">
+                            <view class="detailCard">
+                                <van-image width="6.3rem" height="7rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                                <view class="detailCardText">霸王龙威尔逊</view>
+                            </view>
+                        </van-col>
+                        <van-col span="8">
+                            <view class="detailCard">
+                                <van-image width="6.3rem" height="7rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                                <view class="detailCardText">霸王龙威尔逊</view>
+                            </view>
+
+                        </van-col>
+                        <van-col span="8">
+                            <view class="detailCard">
+                                <van-image width="6.3rem" height="7rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                                <view class="detailCardText">霸王龙威尔逊</view>
+                            </view>
+                        </van-col>
+                        <van-col span="8">
+                            <view class="detailCard">
+                                <van-image width="6.3rem" height="7rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                                <view class="detailCardText">霸王龙威尔逊</view>
+                            </view>
+                        </van-col>
+                        <van-col span="8">
+                            <view class="detailCard">
+                                <van-image width="6.3rem" height="7rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                                <view class="detailCardText">霸王龙威尔逊</view>
+                            </view>
+
+                        </van-col>
+                        <van-col span="8">
+                            <view class="detailCard">
+                                <van-image width="6.3rem" height="7rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                                <view class="detailCardText">霸王龙威尔逊</view>
+                            </view>
+                        </van-col>
+                        <van-col span="8">
+                            <view class="detailCard">
+                                <van-image width="6.3rem" height="7rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                                <view class="detailCardText">霸王龙威尔逊</view>
+                            </view>
+                        </van-col>
+                        <van-col span="8">
+                            <view class="detailCard">
+                                <van-image width="6.3rem" height="7rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                                <view class="detailCardText">霸王龙威尔逊</view>
+                            </view>
+
+                        </van-col>
+                    </van-row>
+                </van-tab>
+            </scroll-view>
+        </van-tabs>
+    </view>
 </view>
