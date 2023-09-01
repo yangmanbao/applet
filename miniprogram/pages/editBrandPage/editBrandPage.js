@@ -1,4 +1,4 @@
-// pages/brandManagePage/brandManagePage.js
+// pages/editBrandPage/editBrandPage.js
 const app = getApp()
 
 Page({
@@ -11,43 +11,30 @@ Page({
         menuRight: app.globalData.menuRight,
         menuBottom: app.globalData.menuBottom,
         menuHeight: app.globalData.menuHeight,
-        showDel:false,
+        fileList: [],
     },
-    backBtn(){
+    //上传文件
+    afterRead(event) {
+        const { file } = event.detail;
+        // 当设置 mutiple 为 true 时, file 为数组格式，否则为对象格式
+        wx.uploadFile({
+          url: 'https://example.weixin.qq.com/upload', // 仅为示例，非真实的接口地址
+          filePath: file.url,
+          name: 'file',
+          formData: { user: 'test' },
+          success(res) {
+            // 上传完成需要更新 fileList
+            const { fileList = [] } = this.data;
+            fileList.push({ ...file, url: res.data });
+            this.setData({ fileList });
+          },
+        });
+      },
+      backBtn(){
         wx.navigateBack({
             delta:1
         })
     },
-    addBrand(){
-        wx.navigateTo({
-            url: '/pages/addBrandPage/addBrandPage',
-          })
-    },
-    editBrand(){
-       
-        wx.navigateTo({
-          url: '/pages/editBrandPage/editBrandPage',
-        })
-        // console.log(111);
-    },
-    manageModel(){
-        wx.navigateTo({
-            url: '/pages/manageModelPage/manageModelPage',
-          })
-        // console.log(222);
-    },
-    delBrand(){
-        this.setData({
-            showDel:true
-        })
-        // console.log(333);
-    },
-    // getUserInfo(event) {
-    //     console.log(event.detail);
-    //   },
-      onClose() {
-        this.setData({ show: false });
-      },
     /**
      * 生命周期函数--监听页面加载
      */

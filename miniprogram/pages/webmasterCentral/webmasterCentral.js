@@ -1,11 +1,21 @@
 // pages/webmasterCentral/webmasterCentral.js
+const app = getApp()
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        navBarHeight: app.globalData.navBarHeight,
+        menuRight: app.globalData.menuRight,
+        menuBottom: app.globalData.menuBottom,
+        menuHeight: app.globalData.menuHeight,
+    },
+    backBtn(){
+        console.log(1111);
+        wx.navigateBack({
+            delta:1
+        })
     },
     brandManage(){
         wx.navigateTo({ 

@@ -1,4 +1,4 @@
-// pages/managerPage/managerPage.js
+// pages/manageModelPage/manageModelPage.js
 Page({
 
     /**

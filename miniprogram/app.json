@@ -1,11 +1,15 @@
 {
 "pages":[
-    "pages/user/user",
+  "pages/editBrandPage/editBrandPage",
 
-    "pages/brandManagePage/brandManagePage",
+  "pages/brandManagePage/brandManagePage",
+
+  "pages/user/user",
     "pages/webmasterCentral/webmasterCentral",
     "pages/managerPage/managerPage",
     "pages/blacklistPage/blacklistPage",
+    "pages/manageModelPage/manageModelPage",
+    "pages/addBrandPage/addBrandPage",
 
     "pages/test2/test2",
     "pages/home/home",
@@ -51,6 +55,9 @@
    "van-image": "/miniprogram_npm/@vant/weapp/image/index",
    "van-row": "/miniprogram_npm/@vant/weapp/row/index",
    "van-col": "/miniprogram_npm/@vant/weapp/col/index",
-   "van-icon": "/miniprogram_npm/@vant/weapp/icon/index"
+   "van-icon": "/miniprogram_npm/@vant/weapp/icon/index",
+   "van-popup": "/miniprogram_npm/@vant/weapp/popup/index",
+   "van-dialog": "/miniprogram_npm/@vant/weapp/dialog/index",
+   "van-uploader": "/miniprogram_npm/@vant/weapp/uploader/index"
   }
 }

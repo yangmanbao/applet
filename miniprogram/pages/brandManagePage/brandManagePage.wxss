@@ -1,1 +1,62 @@
 /* pages/brandManagePage/brandManagePage.wxss */
+.firstNavBar{
+  width: 100%;
+  /* padding: 30rpx; */
+  display: flex;
+  justify-content:space-between ;
+  background-color: #4098fc
+}
+.firstNavBarNum{
+  /* padding-top:20px; */
+  padding-left: 5rpx;
+  font-size: 80rpx;
+  color: aliceblue;
+  padding-bottom: 30rpx;
+}
+.firstNavBarText{
+  padding-top:65rpx;
+  padding-left: 50rpx;
+  font-size: small;
+  color: aliceblue;
+}
+.firstNavBarBtn{
+  padding-top: 120rpx;
+  padding-right: 80rpx;
+}
+
+.brandCards{
+  width: 100%;
+  height: 980rpx;
+  background-color: #F6F9FE;
+  display: flex;
+  justify-content:center ;
+  align-items: flex-start;
+  padding-top: 20rpx;
+}
+
+.brandCard{
+  /* display: flex; */
+  width: 90%;
+  height: 230rpx;
+  /* border:1px solid red; */
+  border-radius: 20rpx;
+  background-color: white;
+  box-shadow: 0 0 10rpx #cacaca inset;
+}
+.brandCardText{
+  font-size: x-large;
+  padding-top: 20rpx;
+  padding-left: 20rpx;
+}
+.van-hairline--bottom{
+  width: 95%;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+
+.brandCardBtns{
+  margin: 40rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

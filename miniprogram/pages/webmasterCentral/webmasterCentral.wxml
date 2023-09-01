@@ -1,21 +1,34 @@
 <!--pages/webmasterCentral/webmasterCentral.wxml-->
 <view class="mainPage">
+    <!-- 自定义导航栏 -->
+    <view class="nav-bar" style="height:{{navBarHeight}}px">
+        <view class="title" style="height:{{menuHeight}}px;bottom:{{menuBottom}}px;line-height:{{menuHeight}}px;display: flex;">
+            <van-icon name="arrow-left" size="30px" style="margin-left: 10rpx ;" bindtap="backBtn" />
+            <view style="margin-left: 225rpx;font-size:35rpx">管理员中心</view>
+        </view>
+    </view>
     <view class="webmaster1">
         <view class="webmasterText">品牌管理</view>
         <view class="webmaster">
-            <van-button round type="default" color="#ADB7CA" class="webmasterBtn" size="normal" bind:click="brandManage"><view style="color: #343F57;">品牌管理</view></van-button>
+            <van-button round type="default" color="#ADB7CA" class="webmasterBtn" size="normal" bindtap="brandManage">
+                <view style="color: #343F57;">品牌管理</view>
+            </van-button>
         </view>
     </view>
     <view class="webmaster1">
         <view class="webmasterText">管理员管理</view>
         <view class="webmaster">
-            <van-button round type="default" color="#ADB7CA" class="webmasterBtn" size="normal" bind:click="manager"><view style="color: #343F57;">管理员管理</view></van-button>
+            <van-button round type="default" color="#ADB7CA" class="webmasterBtn" size="normal" bindtap="manager">
+                <view style="color: #343F57;">管理员管理</view>
+            </van-button>
         </view>
     </view>
     <view class="webmaster1">
         <view class="webmasterText">小黑屋</view>
         <view class="webmaster">
-            <van-button  round type="default" color="#ADB7CA" class="webmasterBtn" size="normal" bind:click="blackList"><view style="color: #343F57;">小黑屋管理</view></van-button>
+            <van-button round type="default" color="#ADB7CA" class="webmasterBtn" size="normal" bindtap="blackList">
+                <view style="color: #343F57;">小黑屋管理</view>
+            </van-button>
         </view>
     </view>
 </view>

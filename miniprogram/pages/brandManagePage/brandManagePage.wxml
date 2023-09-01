@@ -1,8 +1,51 @@
 <!--pages/brandManagePage/brandManagePage.wxml-->
 <view>
-<view>
-总品牌数
+  <!-- 自定义导航栏 -->
+  <view class="nav-bar" style="height:{{navBarHeight}}px;background-color:#4098fc">
+    <view class="title" style="height:{{menuHeight}}px;bottom:{{menuBottom}}px;line-height:{{menuHeight}}px;display: flex;">
+      <van-icon name="arrow-left" size="30px" style="margin-top: 80rpx;margin-left: 10rpx ;color: #FAF7FF;" bindtap="backBtn" />
+      <view style="margin-left: 240rpx;margin-top: 45rpx; color: #FAF7FF;font-size:35rpx">品牌管理</view>
+    </view>
+  </view>
+  <!-- 总品牌数和新增品牌 -->
+  <view class="firstNavBar">
+    <view class="firstNavBarText">
+      总品牌数
+      <view class="firstNavBarNum">25
+      </view>
+    </view>
+    <view class="firstNavBarBtn">
+      <van-button type="default" round size="small" bindtap="addBrand">
+        <view style="color:#4098fc">新增品牌</view>
+      </van-button>
+    </view>
+  </view>
+  <view class="brandCards">
+    <view class="brandCard">
+      <view class="brandCardText">PNSO恐龙大王
+      </view>
+      <view class="van-hairline--bottom"></view>
+      <view class="brandCardBtns">
+        <van-button type="default" bindtap="editBrand">
+          <view style="color: #00BAAD;">编辑品牌</view>
+        </van-button>
+        <van-button type="default" bindtap="manageModel">
+          <view style="color: #2A82E4;">管理模型</view>
+        </van-button>
+        <van-button type="default" bindtap="delBrand">
+          <view style="color: #FF5733;">删除品牌</view>
+        </van-button>
+      </view>
+      <van-dialog
+  use-slot
+  title="删除"
+  show="{{ showDel }}"
+  show-cancel-button
+  bind:close="onClose"
+>
+ <view style="padding: 30rpx; font-size: large;">确定删除该品牌吗？</view> 
+</van-dialog>
+    </view>
+  </view>
 
-
-</view>
 </view>

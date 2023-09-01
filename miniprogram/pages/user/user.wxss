@@ -4,6 +4,9 @@
     height: 100%;
     width: 100%;
 }
+.swiper-container{
+  height: calc(100vh-'{{navBarHeight}}px');
+}
 
 .user-view1{
     height: 250rpx;

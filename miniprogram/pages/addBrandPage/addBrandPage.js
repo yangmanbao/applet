@@ -1,4 +1,4 @@
-// pages/managerPage/managerPage.js
+// pages/addBrandPage/addBrandPage.js
 Page({
 
     /**
