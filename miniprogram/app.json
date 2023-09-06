@@ -1,18 +1,17 @@
 {
 "pages":[
-  "pages/editBrandPage/editBrandPage",
-
-  "pages/brandManagePage/brandManagePage",
+  "pages/home/home",
 
   "pages/user/user",
+
+  "pages/editBrandPage/editBrandPage",
+  "pages/brandManagePage/brandManagePage",
     "pages/webmasterCentral/webmasterCentral",
     "pages/managerPage/managerPage",
     "pages/blacklistPage/blacklistPage",
     "pages/manageModelPage/manageModelPage",
     "pages/addBrandPage/addBrandPage",
-
     "pages/test2/test2",
-    "pages/home/home",
     "pages/shop/shop",
     "pages/test/test",
     "pages/logs/logs"
@@ -28,20 +27,20 @@
   "list": [{
     "pagePath": "pages/home/home",
     "text": "排行榜",
-    "iconPath": "images/tabbar/charts.png",
-    "selectedIconPath": "images/tabbar/selectCharts.png"
+    "iconPath": "./images/tabbar/charts.png",
+    "selectedIconPath": "./images/tabbar/selectCharts.png"
   },
   {
     "pagePath": "pages/shop/shop",
     "text": "找模型",
-    "iconPath": "images/tabbar/searchModel.png",
-    "selectedIconPath": "images/tabbar/selectSearchModel.png"
+    "iconPath": "./images/tabbar/searchModel.png",
+    "selectedIconPath": "./images/tabbar/selectSearchModel.png"
   },
   {
     "pagePath": "pages/user/user",
     "text": "我的",
-    "iconPath": "images/tabbar/main.png",
-    "selectedIconPath": "images/tabbar/selectMain.png"
+    "iconPath": "./images/tabbar/main.png",
+    "selectedIconPath": "./images/tabbar/selectMain.png"
   }]  
 },
   "sitemapLocation": "sitemap.json",

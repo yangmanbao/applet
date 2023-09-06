@@ -1,1 +1,72 @@
 /* pages/home/home.wxss */
+.mainParts {
+  background-color: #F6F9FE;
+}
+
+.mainText1,
+.mainText2 {
+  font-weight: 600;
+  color: #4083F5;
+  padding-top: 15rpx;
+  padding-left: 70rpx;
+}
+
+.mainText2 {
+  font-size: 70rpx;
+}
+
+.tableName {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  height: 100rpx;
+  background-color: #4083F5;
+}
+
+.su-table-box {
+  margin-top: 20rpx;
+  height: 100%;
+  overflow-x: auto;
+  padding-bottom: 40rpx;
+}
+
+.su-table {
+  margin: 0 auto;
+  display: table;
+  border-collapse: collapse;
+  overflow-x: auto;
+  word-break: keep-all;
+  white-space: nowrap;
+  background-color: #FFFFFF;
+  width: 90%;
+  border-radius: 20rpx;
+}
+
+.su-tr {
+  display: table-row;
+}
+
+.su-th {
+  display: table-cell;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  /* border: 1rpx solid #DDDDDD; */
+  border-right: none;
+  border-bottom: none;
+  background-color: #4083F5;
+  color: #FFFFFF;
+}
+
+.su-td {
+  padding: 0rpx 30rpx;
+  display: table-cell;
+  height: 100rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border: 1rpx solid #DDDDDD;
+  border-right: none;
+  border-left: none;
+}

@@ -1,2 +1,28 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<view>
+  <!-- 自定义导航栏 -->
+  <view class="nav-bar" style="height:{{navBarHeight}}px;background-color: #F6F9FE;">
+    <view class="title" style="height:{{menuHeight}}px;bottom:{{menuBottom}}px;line-height:{{menuHeight}}px;display: flex;">
+      <view style="margin-left: 285rpx;font-size:35rpx;font-weight: bold;margin-top: 45rpx;">恐龙时光社</view>
+    </view>
+  </view>
+  <view class="mainParts">
+    <view>
+      <view class="mainText1">恐龙时光社</view>
+      <view class="mainText2">模型排行榜</view>
+    </view>
+    <view class="table">
+      <view class="su-table-box">
+        <view class="su-table">
+          <!-- 表格标题 -->
+          <view class="su-tr">
+            <view class="su-th" wx:for="{{list.th}}" wx:key="index">{{item}}</view>
+          </view><!-- 表格内容 -->
+          <view class="su-tr" wx:for="{{list.td}}" wx:for-item="tdinfo" wx:key="index">
+            <view class="su-td" wx:for="{{tdinfo}}" wx:key="index_">{{item}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

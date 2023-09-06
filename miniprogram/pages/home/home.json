@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTitleText": "管理员中心",
+  "navigationBarBackgroundColor": "#F6F9FE",
+  "navigationStyle": "custom"
 }
