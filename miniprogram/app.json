@@ -2,6 +2,8 @@
 "pages":[
   "pages/home/home",
 
+  "pages/detailsPage/detailsPage",
+
   "pages/user/user",
 
   "pages/editBrandPage/editBrandPage",

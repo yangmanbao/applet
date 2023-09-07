@@ -7,22 +7,42 @@
     </view>
   </view>
   <view class="mainParts">
+    <view style="display: flex;" >
     <view>
       <view class="mainText1">恐龙时光社</view>
       <view class="mainText2">模型排行榜</view>
     </view>
-    <view class="table">
-      <view class="su-table-box">
-        <view class="su-table">
-          <!-- 表格标题 -->
-          <view class="su-tr">
-            <view class="su-th" wx:for="{{list.th}}" wx:key="index">{{item}}</view>
-          </view><!-- 表格内容 -->
-          <view class="su-tr" wx:for="{{list.td}}" wx:for-item="tdinfo" wx:key="index">
-            <view class="su-td" wx:for="{{tdinfo}}" wx:key="index_">{{item}}</view>
-          </view>
-        </view>
+      <view style="margin-left:90rpx;">
+        <van-image width="6rem" height="5rem" fit="cover" src="../../../../images/zero.png" ></van-image>
       </view>
+    </view>
+    <!-- 表格主题 -->
+    <view class="table">
+      <view class="trNav">
+        <view class="th-ranking">排名</view>
+        <view class="th-arter">头像</view>
+        <view class="th-brandName">模型名称</view>
+        <view class="th-score">恐模分</view>
+      </view>
+      <block>
+        <view class="tr" wx:for="{{listdata}}" wx:key="index" bindtap="detailPage">
+        <block>
+          <view wx:if="{{index ==0}}">
+          <van-image width="2.5rem" height="2.5rem" fit="cover" src="../../../../images/first.png" style="padding: 30rpx;" ></van-image>
+        </view>
+        <view wx:elif="{{index==1}}">
+          <van-image width="2.5rem" height="2.5rem" fit="cover" src="../../../../images/second.png" style="padding: 30rpx;"></van-image>
+          </view>
+          <view wx:elif="{{index==2}}">
+          <van-image width="2.5rem" height="2.5rem" fit="cover" src="../../../../images/third.png" style="padding: 30rpx;"></van-image>
+          </view>
+          <view wx:else class="td-ranking">{{index+1}}</view>
+        </block>
+          <van-image round width="2.8rem" height="2.8rem" fit="cover" src="{{item.arter}}" class="td-arter" />
+          <view class="td-brandName">{{item.brandName}}</view>
+          <view class="td-score{{index<3 ? 'three' : ''}}">{{item.score}}</view>
+        </view>
+      </block>
     </view>
   </view>
 </view>
