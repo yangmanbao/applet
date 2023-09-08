@@ -1,1 +1,74 @@
 /* pages/detailsPage/detailsPage.wxss */
+.mainparts{
+  background-color:#F6F9FE;
+  padding:10rpx;
+
+}
+.mainNav{
+  width: 97%;
+  height:480rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  margin-left: 10rpx;
+  padding-top: 20rpx;
+}
+.atver{
+  padding:30rpx
+}
+.navNav{
+  display: flex;
+}
+.modelScore{
+  margin-left: 18rpx;
+  margin-top: 25rpx;
+  height:220rpx;
+  width: 95%;
+  background-color: #FFF9F2;
+  border-radius: 20rpx;
+}
+
+.van-ellipsis{
+  background-color: #F6F9FE;
+}
+.van-tabs__line{
+  background-color: #5687F6 !important
+}
+
+.advertisingMap{
+  padding: 10rpx;
+  height:300rpx;
+  width: 685rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  margin-left: 11rpx;
+  margin-top: 20rpx;
+  /* padding-top: 10rpx; */
+}
+
+.advertisingMapText,
+.informationText{
+  padding:15rpx;
+  color: #2e3e63;
+}
+
+.maps{
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.information{
+  width: 97%;
+  height:380rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  margin-left: 10rpx;
+  padding-top: 10rpx;
+  margin-top: 20rpx;
+}
+.informationTexts{
+  display: flex;
+  margin-left: 15rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+
+}

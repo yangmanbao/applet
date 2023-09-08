@@ -11,12 +11,25 @@ Page({
         menuRight: app.globalData.menuRight,
         menuBottom: app.globalData.menuBottom,
         menuHeight: app.globalData.menuHeight,
+        "manufacturer":'post恐龙大王',
+        "brand":"品牌",
+        "product":"产品",
+        "size":"尺寸",
+        "weight":"重量",
+        "createTime":"时间",
     },
 
     backBtn(){
         wx.navigateBack({
             delta:1
         })
+    },
+
+    onClick(event){
+        wx.showToast({
+            title: `点击标签 ${event.detail.title}`,
+            // icon: 'none',
+          });
     },
     /**
      * 生命周期函数--监听页面加载

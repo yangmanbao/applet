@@ -1,13 +1,10 @@
 {
-"pages":[
-  "pages/home/home",
-
-  "pages/detailsPage/detailsPage",
-
-  "pages/user/user",
-
-  "pages/editBrandPage/editBrandPage",
-  "pages/brandManagePage/brandManagePage",
+  "pages": [
+    "pages/detailsPage/detailsPage",
+    "pages/home/home",
+    "pages/user/user",
+    "pages/editBrandPage/editBrandPage",
+    "pages/brandManagePage/brandManagePage",
     "pages/webmasterCentral/webmasterCentral",
     "pages/managerPage/managerPage",
     "pages/blacklistPage/blacklistPage",
@@ -18,47 +15,49 @@
     "pages/test/test",
     "pages/logs/logs"
   ],
-  "window":{
-    "navigationBarBackgroundColor": "#ffffff", 
-    "navigationBarTitleText": "恐龙时光社", 
-    "backgroundTextStyle":"light",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "恐龙时光社",
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle": "black"
   },
-"tabBar": {
-  "selectedColor": "#1296db",
-  "list": [{
-    "pagePath": "pages/home/home",
-    "text": "排行榜",
-    "iconPath": "./images/tabbar/charts.png",
-    "selectedIconPath": "./images/tabbar/selectCharts.png"
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "排行榜",
+        "iconPath": "./images/tabbar/charts.png",
+        "selectedIconPath": "./images/tabbar/selectCharts.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "找模型",
+        "iconPath": "./images/tabbar/searchModel.png",
+        "selectedIconPath": "./images/tabbar/selectSearchModel.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "./images/tabbar/main.png",
+        "selectedIconPath": "./images/tabbar/selectMain.png"
+      }
+    ]
   },
-  {
-    "pagePath": "pages/shop/shop",
-    "text": "找模型",
-    "iconPath": "./images/tabbar/searchModel.png",
-    "selectedIconPath": "./images/tabbar/selectSearchModel.png"
-  },
-  {
-    "pagePath": "pages/user/user",
-    "text": "我的",
-    "iconPath": "./images/tabbar/main.png",
-    "selectedIconPath": "./images/tabbar/selectMain.png"
-  }]  
-},
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
     "van-button": "/miniprogram_npm/@vant/weapp/button/index",
     "van-tabbar": "/miniprogram_npm/@vant/weapp/tabbar/index",
     "van-tabbar-item": "/miniprogram_npm/@vant/weapp/tabbar-item/index",
     "van-tab": "/miniprogram_npm/@vant/weapp/tab/index",
-   "van-tabs": "/miniprogram_npm/@vant/weapp/tabs/index",
-   "van-card": "/miniprogram_npm/@vant/weapp/card/index",
-   "van-image": "/miniprogram_npm/@vant/weapp/image/index",
-   "van-row": "/miniprogram_npm/@vant/weapp/row/index",
-   "van-col": "/miniprogram_npm/@vant/weapp/col/index",
-   "van-icon": "/miniprogram_npm/@vant/weapp/icon/index",
-   "van-popup": "/miniprogram_npm/@vant/weapp/popup/index",
-   "van-dialog": "/miniprogram_npm/@vant/weapp/dialog/index",
-   "van-uploader": "/miniprogram_npm/@vant/weapp/uploader/index"
+    "van-tabs": "/miniprogram_npm/@vant/weapp/tabs/index",
+    "van-card": "/miniprogram_npm/@vant/weapp/card/index",
+    "van-image": "/miniprogram_npm/@vant/weapp/image/index",
+    "van-row": "/miniprogram_npm/@vant/weapp/row/index",
+    "van-col": "/miniprogram_npm/@vant/weapp/col/index",
+    "van-icon": "/miniprogram_npm/@vant/weapp/icon/index",
+    "van-popup": "/miniprogram_npm/@vant/weapp/popup/index",
+    "van-dialog": "/miniprogram_npm/@vant/weapp/dialog/index",
+    "van-uploader": "/miniprogram_npm/@vant/weapp/uploader/index"
   }
 }
