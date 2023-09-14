@@ -18,14 +18,18 @@
   display: flex;
 }
 .modelScore{
-  margin-left: 18rpx;
+    margin-left: 18rpx;
   margin-top: 25rpx;
   height:220rpx;
   width: 95%;
   background-color: #FFF9F2;
   border-radius: 20rpx;
 }
-
+.rightParts{
+  float: right;
+  margin-top: -130rpx;
+  margin-right: 50rpx;
+}
 .van-ellipsis{
   background-color: #F6F9FE;
 }

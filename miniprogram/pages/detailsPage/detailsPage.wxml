@@ -29,152 +29,203 @@
         </view>
       </view>
       <view class="modelScore">
-        <view style="font-size: 30rpx;color: #515F7D;padding: 20rpx;">
-          模型评分
+        <view class="leftParts">
+          <view style="font-size: 30rpx;color: #515F7D;padding-left: 20rpx;padding-top: 20rpx;">
+            模型评分
+          </view>
+          <view style="width: 50%;margin-left: 20rpx;">
+            <view style="font-size: 25rpx;margin-right: 10rpx;">9-10</view>
+            <view style="margin-left: 30px;margin-top: -20rpx;">
+              <van-progress color="#FE8D19" percentage="75" track-color="#FFEEDA" stroke-width="4px"></van-progress>
+
+            </view>
+            <view>
+            </view>
+          </view>
+          <view style="width: 50%;margin-left: 20rpx;margin-top: 10rpx;">
+            <view style="font-size: 25rpx;margin-right: 10rpx;">7-8</view>
+            <view style="margin-left: 30px;margin-top: -20rpx;">
+              <van-progress color="#FE8D19" percentage="60" track-color="#FFEEDA" stroke-width="4px"></van-progress>
+
+            </view>
+            <view>
+            </view>
+          </view>
+          <view style="width: 50%;margin-left: 20rpx;margin-top: 10rpx">
+            <view style="font-size: 25rpx;margin-right: 10rpx;">5-6</view>
+            <view style="margin-left: 30px;margin-top: -20rpx;">
+              <van-progress color="#FE8D19" percentage="45" track-color="#FFEEDA" stroke-width="4px"></van-progress>
+
+            </view>
+            <view>
+            </view>
+          </view>
+          <view style="width: 50%;margin-left: 20rpx;margin-top: 10rpx">
+            <view style="font-size: 25rpx;margin-right: 10rpx;">3-4</view>
+            <view style="margin-left: 30px;margin-top: -20rpx;">
+              <van-progress color="#FE8D19" percentage="30" track-color="#FFEEDA" stroke-width="4px"></van-progress>
+
+            </view>
+            <view>
+            </view>
+          </view>
+          <view style="width: 50%;margin-left: 20rpx;margin-top: 10rpx">
+            <view style="font-size: 25rpx;margin-right: 10rpx;">1-2</view>
+            <view style="margin-left: 30px;margin-top: -20rpx;">
+              <van-progress color="#FE8D19" percentage="15" track-color="#FFEEDA" stroke-width="4px"></van-progress>
+
+            </view>
+            <view>
+            </view>
+          </view>
+        </view>
+        <view class="rightParts">
+          <view style="font-size: x-large;font-weight: bold;">9.0</view>
+          <view style="margin-top: -50rpx;margin-left: 90rpx;">非常推荐</view>
+          <view style="color: #9CA5B6;font-size: 25rpx;margin-top: 30rpx;">xxx人已入</view>
+          <view style="color: #9CA5B6;font-size: 25rpx;margin-left: 130rpx;margin-top: -35rpx;">xxx人想要</view>
         </view>
       </view>
     </view>
-    <!-- <view class="mainPage"> -->
-      <scroll-view class="tab stickyClass"  scroll-with-animation="true" scroll-into-view='{{indexMaodian}}'>
-        <view  bindtap='clickMenu' class="tab-item {{currentTab == 'modelPages' ? 'active' : ''}}" data-id="modelPages" id='modelPage'>模型图</view>
-        <view  bindtap='clickMenu' class="tab-item {{currentTab == 'messages' ? 'active' : ''}}" data-id="messages" id='message'>资料</view>
-        <view  bindtap='clickMenu' class="tab-item {{currentTab == 'evaluates' ? 'active' : ''}}" data-id="evaluates" id='evaluate'>评价</view>
-      </scroll-view>
-      <scroll-view  scroll-into-view='{{storeDetail}}'  style="height: 1200rpx;" scroll-y class="scroll-two" bindscroll="onPageScroll">
-        <view class="advertisingMap" id="modelPages">
-          <view class="advertisingMapText">官方宣传图</view>
-          <scroll-view scroll-x>
-            <view style="display: flex;">
-              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="maps"></van-image>
-              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="maps"></van-image>
-              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="maps"></van-image>
-              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="maps"></van-image>
-              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="maps"></van-image>
-            </view>
-          </scroll-view>
+    <scroll-view class="tab stickyClass" scroll-with-animation="true" scroll-into-view='{{indexMaodian}}'>
+      <view bindtap='clickMenu' class="tab-item {{currentTab == 'modelPages' ? 'active' : ''}}" data-id="modelPages" id='modelPage'>模型图</view>
+      <view bindtap='clickMenu' class="tab-item {{currentTab == 'messages' ? 'active' : ''}}" data-id="messages" id='message'>资料</view>
+      <view bindtap='clickMenu' class="tab-item {{currentTab == 'evaluates' ? 'active' : ''}}" data-id="evaluates" id='evaluate'>评价</view>
+    </scroll-view>
+    <scroll-view scroll-into-view='{{storeDetail}}' style="height: 1200rpx;" scroll-y class="scroll-two" bindscroll="onPageScroll">
+      <view class="advertisingMap" id="modelPages">
+        <view class="advertisingMapText">官方宣传图</view>
+        <scroll-view scroll-x>
+          <view style="display: flex;">
+            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="maps"></van-image>
+            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="maps"></van-image>
+            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="maps"></van-image>
+            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="maps"></van-image>
+            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="maps"></van-image>
+          </view>
+        </scroll-view>
+      </view>
+      <view class="information" id="messages">
+        <view class="informationText">
+          模型参数
         </view>
-        <view class="information" id="messages">
-          <view class="informationText">
-            模型参数
+        <view class="informationTexts">
+          <view style="width: 130rpx;  text-align-last: justify;">
+            制作厂商
           </view>
-          <view class="informationTexts">
-            <view style="width: 130rpx;  text-align-last: justify;">
-              制作厂商
-            </view>
-            <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
-              {{manufacturer}}
-            </view>
-          </view>
-          <view class="informationTexts">
-            <view style="width: 130rpx;  text-align-last: justify;">
-              品牌系列
-            </view>
-            <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
-              {{brand}}
-            </view>
-          </view>
-          <view class="informationTexts">
-            <view style="width: 130rpx;  text-align-last: justify;">
-              产品比例
-            </view>
-            <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
-              {{product}}
-            </view>
-          </view>
-          <view class="informationTexts">
-            <view style="width: 130rpx;  text-align-last: justify;">
-              尺寸信息
-            </view>
-            <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
-              {{size}}
-            </view>
-          </view>
-          <view class="informationTexts">
-            <view style="width: 130rpx;  text-align-last: justify;">
-              重量
-            </view>
-            <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
-              {{weight}}
-            </view>
-          </view>
-          <view class="informationTexts">
-            <view style="width: 130rpx;  text-align-last: justify;">
-              发售时间
-            </view>
-            <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
-              {{createTime}}
-            </view>
+          <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
+            {{manufacturer}}
           </view>
         </view>
-        <view class="rate" id="evaluates">
-          玩家评价
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
-          <view>1111111111111</view>
+        <view class="informationTexts">
+          <view style="width: 130rpx;  text-align-last: justify;">
+            品牌系列
+          </view>
+          <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
+            {{brand}}
+          </view>
         </view>
-      </scroll-view>
+        <view class="informationTexts">
+          <view style="width: 130rpx;  text-align-last: justify;">
+            产品比例
+          </view>
+          <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
+            {{product}}
+          </view>
+        </view>
+        <view class="informationTexts">
+          <view style="width: 130rpx;  text-align-last: justify;">
+            尺寸信息
+          </view>
+          <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
+            {{size}}
+          </view>
+        </view>
+        <view class="informationTexts">
+          <view style="width: 130rpx;  text-align-last: justify;">
+            重量
+          </view>
+          <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
+            {{weight}}
+          </view>
+        </view>
+        <view class="informationTexts">
+          <view style="width: 130rpx;  text-align-last: justify;">
+            发售时间
+          </view>
+          <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
+            {{createTime}}
+          </view>
+        </view>
+      </view>
+      <view class="rate" id="evaluates">
+        玩家评价
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+        <view>1111111111111</view>
+      </view>
+    </scroll-view>
 
-    <!-- </view> -->
 
 
   </view>
