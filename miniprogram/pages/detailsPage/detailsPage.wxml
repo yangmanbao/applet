@@ -105,7 +105,10 @@
           </view>
 
         </van-tab>
-        <van-tab title="评价">玩家评价</van-tab>
+        <van-tab title="评价">玩家评价
+        <view>
+        </view>
+        </van-tab>
       </van-tabs>
     </view>
   </view>
