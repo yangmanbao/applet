@@ -1,0 +1,131 @@
+/* pages/detailsPage/detailsPage.wxss */
+page{
+  height: 100vh;
+}
+.mainparts{
+  background-color:#F6F9FE;
+  padding:10rpx;
+
+}
+
+.mainNav{
+  width: 97%;
+  height:480rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  margin-left: 10rpx;
+  padding-top: 20rpx;
+}
+.atver{
+  padding:30rpx
+}
+.navNav{
+  display: flex;
+}
+.modelScore{
+  margin-left: 18rpx;
+  margin-top: 25rpx;
+  height:220rpx;
+  width: 95%;
+  background-color: #FFF9F2;
+  border-radius: 20rpx;
+}
+
+.van-ellipsis{
+  background-color: #F6F9FE;
+}
+.van-tabs__line{
+  background-color: #5687F6 !important
+}
+
+.advertisingMap{
+  padding: 10rpx;
+  height:300rpx;
+  width: 685rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  margin-left: 11rpx;
+  margin-top: 20rpx;
+
+}
+
+.advertisingMapText,
+.informationText{
+  padding:15rpx;
+  color: #2e3e63;
+}
+
+.maps{
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.information{
+  width: 97%;
+  height:380rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  margin-left: 10rpx;
+  padding-top: 10rpx;
+  margin-top: 20rpx;
+}
+.informationTexts{
+  display: flex;
+  margin-left: 15rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+
+}
+
+.indexBar .van-index-bar__sidebar{
+  opacity: 0;
+}
+
+
+.stickyClass{
+  position: sticky ;
+  /* top: 70rpx;   距离顶部还有多少时候产生吸顶效果 */
+  z-index: 9999;
+}
+.tab {
+width: 100%;
+margin-top: 10rpx;
+top: 0;
+left: 0;
+z-index: 100;
+white-space: nowrap;
+box-sizing: border-box;
+overflow: hidden;
+line-height: 80rpx;
+background: #F6F9FE;
+border-bottom: 2rpx solid #f5f5f5;
+padding-left: 3%;
+padding-right: 3%;
+}
+
+.tab-item {
+display: inline-block;
+text-align: center;
+font-size: 30rpx;
+padding-left: 25rpx;
+padding-right: 25rpx;
+z-index: 999;
+margin-right: 120rpx;
+margin-left: 22rpx;
+}
+
+.active {
+border-bottom: 5rpx solid #5687F6;
+color: #5687F6;
+}
+
+.active1 {
+background: #5687F6;
+}
+
+
+.scroll-two ::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}

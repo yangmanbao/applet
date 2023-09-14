@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/detailsPage/detailsPage",
+    "pages/detailsPageCopy/detailsPage",
     "pages/home/home",
     "pages/user/user",
     "pages/editBrandPage/editBrandPage",
