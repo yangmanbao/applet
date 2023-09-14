@@ -15,6 +15,11 @@ App({
     that.globalData.menuRight = systemInfo.screenWidth - menuButtonInfo.right;
     that.globalData.menuBottom = menuButtonInfo.top - systemInfo.statusBarHeight;
     that.globalData.menuHeight = menuButtonInfo.height;
+    const resdata = wx.getMenuButtonBoundingClientRect();
+    console.log(resdata, 'resdata')
+    this.globalData.menuButtonTop = resdata.top;
+    this.globalData.menuButtonHeight = resdata.height
+    this.globalData.menuButtonBottom = resdata.bottom
     // 登录
     wx.login({
       success: res => {
@@ -32,5 +37,9 @@ App({
     menuRight: 0, // 胶囊距右方间距（方保持左、右间距一致）
     menuBottom: 0, // 胶囊距底部间距（保持底部间距一致）
     menuHeight: 0, // 胶囊高度（自定义内容可与胶囊高度保证一致）
+
+    menuButtonTop: 0, //胶囊按钮的上边界坐标
+    menuButtonHeight: 0, //胶囊按钮高度
+    menuButtonBottom: 0, //胶囊按钮的下边界坐标
   }
 })

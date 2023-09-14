@@ -1,0 +1,19 @@
+.customtopbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+}
+.container {
+  padding:0 32rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .search {
+  padding: 0;
+  width: 500rpx;
+  height: 100%;
+}

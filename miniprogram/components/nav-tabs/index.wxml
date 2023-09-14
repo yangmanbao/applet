@@ -1,0 +1,8 @@
+<!--miniprogram/components/cloudTipModal/index.wxml-->
+
+<view id="customtopbar" class="customtopbar" style="height: {{menuButtonBottom + 10}}px;">
+  <view style="height: {{menuButtonTop}}px;" />
+  <view class="container" style="height: {{menuButtonHeight}}px;">
+    <van-search value="{{ value }}" custom-class="search" shape="round"  placeholder="搜索" />
+  </view>
+</view>

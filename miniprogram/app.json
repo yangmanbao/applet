@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/detailsPage/detailsPage",
-    "pages/detailsPageCopy/detailsPage",
     "pages/home/home",
     "pages/user/user",
     "pages/editBrandPage/editBrandPage",
@@ -59,6 +58,8 @@
     "van-icon": "/miniprogram_npm/@vant/weapp/icon/index",
     "van-popup": "/miniprogram_npm/@vant/weapp/popup/index",
     "van-dialog": "/miniprogram_npm/@vant/weapp/dialog/index",
-    "van-uploader": "/miniprogram_npm/@vant/weapp/uploader/index"
+    "van-uploader": "/miniprogram_npm/@vant/weapp/uploader/index",
+    "van-index-bar": "/miniprogram_npm/@vant/weapp/index-bar/index",
+    "van-index-anchor": "/miniprogram_npm/@vant/weapp/index-anchor/index"
   }
 }
