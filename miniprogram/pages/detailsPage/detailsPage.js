@@ -1,6 +1,5 @@
 // pages/detailsPage/detailsPage.js
 const app = getApp()
-
 Page({
 
     /**
@@ -19,9 +18,78 @@ Page({
         "createTime": "时间",
         currentTab: 'modelPages',  //当前的分类tab
         storeDetail: 'modelPages',//当前的分类的id
-        indexMaodian: 'modelPage'
+        indexMaodian: 'modelPage',
+        isWant:true,
+        isWanted:true,
+        selectPopular:true,//选择热门按钮
+        selectNew:false,//选择最新按钮
+        introductFlag:false,//设置点击时，是否出现全文还是出现省略号和展开按钮
+ 	    foldText:'展开',  //控制简介中展开和收起的出现与否
+        textEtc:"...", //控制简介中省略号的出现与否
+        isLike:true,//是否点赞
+        showActionSheet:false,//是否显示动作面板
+        actions: [
+            { name: '编辑点评'},
+            { name: '删除评价', color: '#ee0a24' },
+          ],
+          showEditRate:false,//是否显示编辑点评页面
+          showDelRate:false,//是否显示删除评价页面
     },
-
+  fold(e){
+        this.setData({
+            introductFlag: !this.data.introductFlag,
+        })
+        this.setData({
+          foldText:this.data.introductFlag==true? '收起':'展开',
+          textEtc:this.data.introductFlag==true? ' ':'...'
+        })
+      },
+      onLike(){
+          this.setData({
+            isLike:true
+          })
+      },
+      onActionSheetClose(){
+          this.setData({
+            showActionSheet:false
+          })
+      },
+      cancelLike(){
+        this.setData({
+            isLike:false
+          })
+      },
+      openSelect(){
+          this.setData({
+              showActionSheet:true
+          })
+      },
+      onSelectActionSheet(e){
+          if(e.detail.name=="编辑点评"){
+              this.setData({
+                showEditRate:true
+              })
+          }
+          else{
+            this.setData({
+                showDelRate:true
+              })
+          }
+        console.log(e.detail.name,111);
+    },
+    onDelRateCancel(){
+        this.setData({
+            showDelRate:false
+          })
+    },
+    onEditRateClose(){
+        this.setData({
+            showEditRate:false
+          })
+    },
+    delRate(){
+        console.log("删除成功");
+    },
     backBtn() {
         wx.navigateBack({
             delta: 1
@@ -63,6 +131,18 @@ Page({
             });
         }
     },
+    changePopular(){
+        this.setData({
+            selectPopular:true,
+            selectNew:false
+        })
+    },
+    changeNew(){
+        this.setData({
+            selectPopular:false,
+            selectNew:true
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
@@ -74,7 +154,26 @@ Page({
             height: windowHeight
         });
     },
-
+    addWant(){
+        this.setData({
+            isWant:false
+        })
+    },
+    cancelWant(){
+        this.setData({
+            isWant:true
+        })
+    },
+    addWanted(){
+        this.setData({
+            isWanted:false
+        })
+    },
+    cancelWanted(){
+        this.setData({
+            isWanted:true
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

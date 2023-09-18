@@ -59,8 +59,7 @@
     "van-popup": "/miniprogram_npm/@vant/weapp/popup/index",
     "van-dialog": "/miniprogram_npm/@vant/weapp/dialog/index",
     "van-uploader": "/miniprogram_npm/@vant/weapp/uploader/index",
-    "van-index-bar": "/miniprogram_npm/@vant/weapp/index-bar/index",
-    "van-index-anchor": "/miniprogram_npm/@vant/weapp/index-anchor/index",
-    "van-progress": "/miniprogram_npm/@vant/weapp/progress/index"
+    "van-progress": "/miniprogram_npm/@vant/weapp/progress/index",
+    "van-action-sheet": "/miniprogram_npm/@vant/weapp/action-sheet/index"
   }
 }
