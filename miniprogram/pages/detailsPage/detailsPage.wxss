@@ -1,234 +1,294 @@
 /* pages/detailsPage/detailsPage.wxss */
 .mainparts {
-    background-color: #F6F9FE;
-    padding: 10rpx;
+  background-color: #F6F9FE;
+  padding: 10rpx;
 }
 
 .mainNav {
-    width: 97%;
-    height: 480rpx;
-    background-color: #fff;
-    border-radius: 30rpx;
-    margin-left: 10rpx;
-    padding-top: 20rpx;
+  width: 97%;
+  height: 480rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  margin-left: 10rpx;
+  padding-top: 20rpx;
 }
 
 .atver {
-    padding: 30rpx
+  padding: 30rpx
 }
 
 .navNav {
-    display: flex;
+  display: flex;
 }
 
 .modelScore {
-    margin-left: 18rpx;
-    margin-top: 25rpx;
-    height: 220rpx;
-    width: 95%;
-    background-color: #FFF9F2;
-    border-radius: 20rpx;
+  margin-left: 18rpx;
+  margin-top: 25rpx;
+  height: 220rpx;
+  width: 95%;
+  background-color: #FFF9F2;
+  border-radius: 20rpx;
 }
 
 .rightParts {
-    float: right;
-    margin-top: -130rpx;
-    margin-right: 50rpx;
+  float: right;
+  margin-top: -130rpx;
+  margin-right: 50rpx;
 }
 
 .van-ellipsis {
-    background-color: #F6F9FE;
+  background-color: #F6F9FE;
 }
 
 .van-tabs__line {
-    background-color: #5687F6 !important
+  background-color: #5687F6 !important
 }
 
 .advertisingMap {
-    padding: 10rpx;
-    height: 300rpx;
-    width: 685rpx;
-    background-color: #fff;
-    border-radius: 30rpx;
-    margin-left: 11rpx;
-    margin-top: 20rpx;
-    /* padding-top: 10rpx; */
+  padding: 10rpx;
+  height: 300rpx;
+  width: 685rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  margin-left: 11rpx;
+  margin-top: 20rpx;
+  /* padding-top: 10rpx; */
 }
 
 .advertisingMapText,
 .informationText,
 .rateText {
-    padding: 15rpx;
-    color: #2e3e63;
+  padding: 15rpx;
+  color: #2e3e63;
 }
 
 .maps {
-    margin-left: 20rpx;
-    margin-bottom: 20rpx;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
 }
 
 .information {
-    width: 97%;
-    height: 380rpx;
-    background-color: #fff;
-    border-radius: 30rpx;
-    margin-left: 10rpx;
-    padding-top: 10rpx;
-    margin-top: 20rpx;
+  width: 97%;
+  height: 380rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  margin-left: 10rpx;
+  padding-top: 10rpx;
+  margin-top: 20rpx;
 }
 
 .informationTexts {
-    display: flex;
-    margin-left: 15rpx;
-    line-height: 50rpx;
-    font-size: 30rpx;
+  display: flex;
+  margin-left: 15rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
 
 }
 
 .stickyClass {
-    position: sticky;
-    top: 70rpx;
-    /*//距离顶部还有多少时候产生吸顶效果 */
-    z-index: 9999;
+  position: sticky;
+  top: 70rpx;
+  /*//距离顶部还有多少时候产生吸顶效果 */
+  z-index: 9999;
 }
 
 .tab {
-    width: 100%;
-    margin-top: 10rpx;
-    top: 120rpx;
-    left: 0;
-    z-index: 100;
-    white-space: nowrap;
-    box-sizing: border-box;
-    overflow: hidden;
-    line-height: 80rpx;
-    background: #F6F9FE;
-    border-bottom: 2rpx solid #f5f5f5;
-    padding-left: 3%;
-    padding-right: 3%;
+  width: 100%;
+  margin-top: 10rpx;
+  top: 120rpx;
+  left: 0;
+  z-index: 100;
+  white-space: nowrap;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 80rpx;
+  background: #F6F9FE;
+  border-bottom: 2rpx solid #f5f5f5;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 .tab-item {
-    display: inline-block;
-    text-align: center;
-    font-size: 30rpx;
-    padding-left: 25rpx;
-    padding-right: 25rpx;
-    z-index: 999;
-    margin-right: 120rpx;
-    margin-left: 20rpx;
+  display: inline-block;
+  text-align: center;
+  font-size: 30rpx;
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+  z-index: 999;
+  margin-right: 120rpx;
+  margin-left: 20rpx;
 }
 
 .active {
-    border-bottom: 5rpx solid #5687F6;
-    color: #5687F6;
+  border-bottom: 5rpx solid #5687F6;
+  color: #5687F6;
 }
 
 .active1 {
-    background: #5687F6;
+  background: #5687F6;
 }
 
 .scroll-two ::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-    color: transparent;
+  width: 0;
+  height: 0;
+  color: transparent;
 }
 
 .rate {
-    margin-top: 20rpx;
-    width: 97%;
-    background-color: #fff;
-    border-radius: 30rpx;
-    margin-left: 10rpx;
+  margin-top: 20rpx;
+  width: 97%;
+  background-color: #fff;
+  border-radius: 30rpx;
+  margin-left: 10rpx;
 }
 
 .ratePart {
-    width: 95%;
-    margin: 20rpx;
-    margin-top: 35rpx;
+  width: 95%;
+  margin: 20rpx;
+  margin-top: 35rpx;
 }
 
 .popularest {
-    margin-left: 285rpx;
-    margin-top: 10rpx;
+  margin-left: 285rpx;
+  margin-top: 10rpx;
 }
 
 .selectPopularest {
-    margin-left: 285rpx;
-    margin-top: 10rpx;
+  margin-left: 285rpx;
+  margin-top: 10rpx;
 }
 
 .newest {
-    margin-left: 15rpx;
-    margin-top: 10rpx;
-    
+  margin-left: 15rpx;
+  margin-top: 10rpx;
+
 }
-.popularText{
-    font-size: 28rpx;
-    font-weight: bold;
-    color:#515F7D
+
+.popularText {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #515F7D
 }
+
 .selectPopularText {
-    font-size: 28rpx;
+  font-size: 28rpx;
 
-    color:#fff;
+  color: #fff;
 }
-.newText{
-    font-size: 28rpx;
-    font-weight: bold;
-    color:#515F7D
+
+.newText {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #515F7D
 }
+
 .selectNewText {
-    font-size: 28rpx;
-    color:#fff;
+  font-size: 28rpx;
+  color: #fff;
 }
 
-.rateImg{
-    margin-left: 10rpx;
+.rateImg {
+  margin-left: 10rpx;
 }
 
-.topIntroduct{
-    width:100%;
-}
-.topIntroduct .text{   
-    /* //文本的view实现父级的相对定位，并实现省略号 */
-    width:90%;
-    margin:10rpx auto;
-    line-height:60rpx;
-    color:#64676e;
-    position: relative;
-
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;  /*//设置超出几行省略内容*/ 
-    text-overflow:ellipsis;
-    overflow: hidden;
-}
-.fold::before{     /* //设置在文本下面的展开按钮那一部分，此部分的前面设置——...省略号，并通过绝对定位设置在超出部分的后面*/ 
-    content:attr(data-etc);
-    position: absolute;
-    left:0;
-    bottom:-10rpx;
-    transform: translateX(4rpx);
-
-}
-.fold::after{  /*//设置文本下面的展开按钮的那一部分，此部分的后面设置——展开  展开按钮，并通过绝对定位设置在省略号的后面*/
-    content:attr(data-text);
-    position:absolute;
-    bottom:-10rpx;
-    right:0;
-    color:#409eff;
+.topIntroduct {
+  width: 100%;
 }
 
-.fold{  /*//展开按钮的那一部分，同样设置绝对定位，并设置宽高，将通过样式实现的省略号遮住，同时将::before和::after展开的内容设置在里面*/ 
-    width:105rpx;
-    height:35rpx;
-    margin-top: 10rpx;
-    position: absolute;
-    right:0;
-    bottom:10rpx;
-    background-color:#fff;
+.topIntroduct .text {
+  /* //文本的view实现父级的相对定位，并实现省略号 */
+  width: 90%;
+  margin: 10rpx auto;
+  line-height: 60rpx;
+  color: #64676e;
+  position: relative;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  /*//设置超出几行省略内容*/
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.foldIntroduct{   /*//出现此样式名时，设置不出现省略号和展开按钮*/
-  -webkit-line-clamp:inherit!important;
+
+.fold::before {
+  /* //设置在文本下面的展开按钮那一部分，此部分的前面设置——...省略号，并通过绝对定位设置在超出部分的后面*/
+  content: attr(data-etc);
+  position: absolute;
+  left: 0;
+  bottom: -10rpx;
+  transform: translateX(4rpx);
+
+}
+
+.fold::after {
+  /*//设置文本下面的展开按钮的那一部分，此部分的后面设置——展开  展开按钮，并通过绝对定位设置在省略号的后面*/
+  content: attr(data-text);
+  position: absolute;
+  bottom: -10rpx;
+  right: 0;
+  color: #409eff;
+}
+
+.fold {
+  /*//展开按钮的那一部分，同样设置绝对定位，并设置宽高，将通过样式实现的省略号遮住，同时将::before和::after展开的内容设置在里面*/
+  width: 105rpx;
+  height: 35rpx;
+  margin-top: 10rpx;
+  position: absolute;
+  right: 0;
+  bottom: 10rpx;
+  background-color: #fff;
+}
+
+.foldIntroduct {
+  /*//出现此样式名时，设置不出现省略号和展开按钮*/
+  -webkit-line-clamp: inherit !important;
+}
+
+.editPage {
+  height: 500rpx;
+}
+
+.editPageNav {
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20rpx;
+  font-size: larger;
+  font-weight:600;
+  color:#fff;
+  background-color: #409eff;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+}
+
+
+.wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100vh;
+}
+
+.block {
+  width: 100%;
+  height: 520px;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  background-color: #fff;
+}
+
+.scoreBtns{
+  display: inline;
+  align-items:center;
+  justify-content: center;
+  font-size: 20rpx;
+}
+.scoreText{
+  padding:10rpx;
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
 }

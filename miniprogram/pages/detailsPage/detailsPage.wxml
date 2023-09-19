@@ -1,45 +1,45 @@
 <!--pages/detailsPage/detailsPage.wxml-->
 <view>
-    <view class="nav-bar" style="height:{{navBarHeight}}px;background:#F6F9FE;position: fixed;width: 100%;top: 0px;z-index: 999;">
-        <view class="title" style="height:{{menuHeight}}px;bottom:{{menuBottom}}px;line-height:{{menuHeight}}px;display: flex;justify-content:space-between">
-            <van-icon name="arrow-left" size="30px" style="margin-top: 80rpx;" bindtap="backBtn" />
-            <view style="margin-top: 45rpx; font-size:35rpx">霸王龙威尔逊</view>
-            <view style="width: 60rpx;height: 10rpx;"></view>
-        </view>
+  <view class="nav-bar" style="height:{{navBarHeight}}px;background:#F6F9FE;position: fixed;width: 100%;top: 0px;z-index: 999;">
+    <view class="title" style="height:{{menuHeight}}px;bottom:{{menuBottom}}px;line-height:{{menuHeight}}px;display: flex;justify-content:space-between">
+      <van-icon name="arrow-left" size="30px" style="margin-top: 80rpx;" bindtap="backBtn" />
+      <view style="margin-top: 45rpx; font-size:35rpx">霸王龙威尔逊</view>
+      <view style="width: 60rpx;height: 10rpx;"></view>
     </view>
-    <view class="mainparts" style="margin-top:{{navBarHeight}}px">
-        <view class="mainNav">
-            <view class="navNav">
-                <view>
-                    <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="atver"></van-image>
-                </view>
-                <view>
-                    <view style="color: #2E3E63;font-weight:bold;font-size: 40rpx;">霸王龙威尔逊</view>
-                    <view style="font-size: 28rpx;line-height: 60rpx;">品牌:PNSO恐龙大王</view>
-                    <view style="margin-top: 30rpx;">
-                        <!-- 已开售的模型 -->
-                        <block>
-                            <van-button color="#FFEEDA" size="small" round bindtap="addWant" wx:if="{{isWant}}">
-                                <van-icon name="like-o" style="margin-right: 13rpx;" color="darkgray" />
-                                <text style="color:darkgray;">想入</text>
-                            </van-button>
-                            <van-button color="#FFEEDA" size="small" round bindtap="cancelWant" wx:else>
-                                <van-icon name="like" style="margin-right: 13rpx;" color="#FE8D19" />
-                                <text style="color: #FE8D19;">想入</text>
-                            </van-button>
-                        </block>
-                        <block>
-                            <van-button color="#FFEEDA" size="small" round bindtap="addWanted" wx:if="{{isWanted}}" style="margin-left: 20rpx;">
-                                <van-icon name="like-o" style="margin-right: 13rpx;" color="darkgray" />
-                                <text style="color:darkgray;">已入</text>
-                            </van-button>
-                            <van-button color="#FFEEDA" size="small" round bindtap="cancelWanted" wx:else style="margin-left: 20rpx;">
-                                <van-icon name="like" style="margin-right: 13rpx;" color="#FE8D19" />
-                                <text style="color: #FE8D19;">已入</text>
-                            </van-button>
-                        </block>
-                        <!-- 未开售的模型 -->
-                        <!-- <block>
+  </view>
+  <view class="mainparts" style="margin-top:{{navBarHeight}}px">
+    <view class="mainNav">
+      <view class="navNav">
+        <view>
+          <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="atver"></van-image>
+        </view>
+        <view>
+          <view style="color: #2E3E63;font-weight:bold;font-size: 40rpx;">霸王龙威尔逊</view>
+          <view style="font-size: 28rpx;line-height: 60rpx;">品牌:PNSO恐龙大王</view>
+          <view style="margin-top: 30rpx;">
+            <!-- 已开售的模型 -->
+            <block>
+              <van-button color="#FFEEDA" size="small" round bindtap="addWant" wx:if="{{isWant}}">
+                <van-icon name="like-o" style="margin-right: 13rpx;" color="darkgray" />
+                <text style="color:darkgray;">想入</text>
+              </van-button>
+              <van-button color="#FFEEDA" size="small" round bindtap="cancelWant" wx:else>
+                <van-icon name="like" style="margin-right: 13rpx;" color="#FE8D19" />
+                <text style="color: #FE8D19;">想入</text>
+              </van-button>
+            </block>
+            <block>
+              <van-button color="#FFEEDA" size="small" round bindtap="addWanted" wx:if="{{isWanted}}" style="margin-left: 20rpx;">
+                <van-icon name="like-o" style="margin-right: 13rpx;" color="darkgray" />
+                <text style="color:darkgray;">已入</text>
+              </van-button>
+              <van-button color="#FFEEDA" size="small" round bindtap="cancelWanted" wx:else style="margin-left: 20rpx;">
+                <van-icon name="like" style="margin-right: 13rpx;" color="#FE8D19" />
+                <text style="color: #FE8D19;">已入</text>
+              </van-button>
+            </block>
+            <!-- 未开售的模型 -->
+            <!-- <block>
              <van-button color="#FFEEDA" style="margin-right: 40rpx;" size="small" round
             bindtap="addWant" wx:if="{{isWant}}">
               <van-icon name="star-o"style="margin-right: 13rpx;" color="darkgray" />
@@ -57,413 +57,419 @@
               未开售
             </van-button>
           </block> -->
-                    </view>
-                </view>
-            </view>
-            <view class="modelScore">
-                <view class="leftParts">
-                    <view style="font-size: 30rpx;color: #515F7D;padding-left: 20rpx;padding-top: 20rpx;">
-                        模型评分
-                    </view>
-                    <view style="width: 50%;margin-left: 20rpx;">
-                        <view style="font-size: 25rpx;margin-right: 10rpx;">9-10</view>
-                        <view style="margin-left: 30px;margin-top: -20rpx;">
-                            <van-progress color="#FE8D19" percentage="75" track-color="#FFEEDA" stroke-width="4px"></van-progress>
-
-                        </view>
-                        <view>
-                        </view>
-                    </view>
-                    <view style="width: 50%;margin-left: 20rpx;margin-top: 10rpx;">
-                        <view style="font-size: 25rpx;margin-right: 10rpx;">7-8</view>
-                        <view style="margin-left: 30px;margin-top: -20rpx;">
-                            <van-progress color="#FE8D19" percentage="60" track-color="#FFEEDA" stroke-width="4px"></van-progress>
-
-                        </view>
-                        <view>
-                        </view>
-                    </view>
-                    <view style="width: 50%;margin-left: 20rpx;margin-top: 10rpx">
-                        <view style="font-size: 25rpx;margin-right: 10rpx;">5-6</view>
-                        <view style="margin-left: 30px;margin-top: -20rpx;">
-                            <van-progress color="#FE8D19" percentage="45" track-color="#FFEEDA" stroke-width="4px"></van-progress>
-
-                        </view>
-                        <view>
-                        </view>
-                    </view>
-                    <view style="width: 50%;margin-left: 20rpx;margin-top: 10rpx">
-                        <view style="font-size: 25rpx;margin-right: 10rpx;">3-4</view>
-                        <view style="margin-left: 30px;margin-top: -20rpx;">
-                            <van-progress color="#FE8D19" percentage="30" track-color="#FFEEDA" stroke-width="4px"></van-progress>
-
-                        </view>
-                        <view>
-                        </view>
-                    </view>
-                    <view style="width: 50%;margin-left: 20rpx;margin-top: 10rpx">
-                        <view style="font-size: 25rpx;margin-right: 10rpx;">1-2</view>
-                        <view style="margin-left: 30px;margin-top: -20rpx;">
-                            <van-progress color="#FE8D19" percentage="15" track-color="#FFEEDA" stroke-width="4px"></van-progress>
-
-                        </view>
-                        <view>
-                        </view>
-                    </view>
-                </view>
-                <view class="rightParts">
-                    <view style="font-size: x-large;font-weight: bold;">9.0</view>
-                    <view style="margin-top: -50rpx;margin-left: 90rpx;">非常推荐</view>
-                    <view style="color: #9CA5B6;font-size: 25rpx;margin-top: 30rpx;">xxx人已入</view>
-                    <view style="color: #9CA5B6;font-size: 25rpx;margin-left: 130rpx;margin-top: -35rpx;">xxx人想要</view>
-                </view>
-            </view>
+          </view>
         </view>
-        <scroll-view class="tab stickyClass" scroll-with-animation="true" scroll-into-view='{{indexMaodian}}'>
-            <view bindtap='clickMenu' class="tab-item {{currentTab == 'modelPages' ? 'active' : ''}}" data-id="modelPages" id='modelPage'>模型图</view>
-            <view bindtap='clickMenu' class="tab-item {{currentTab == 'messages' ? 'active' : ''}}" data-id="messages" id='message'>资料</view>
-            <view bindtap='clickMenu' class="tab-item {{currentTab == 'evaluates' ? 'active' : ''}}" data-id="evaluates" id='evaluate'>评价</view>
-        </scroll-view>
-        <scroll-view scroll-into-view='{{storeDetail}}' style="height: 1200rpx;" scroll-y class="scroll-two" bindscroll="onPageScroll">
-            <view class="advertisingMap" id="modelPages">
-                <view class="advertisingMapText">官方宣传图</view>
-                <scroll-view scroll-x>
-                    <view style="display: flex;">
-                        <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="maps"></van-image>
-                        <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="maps"></van-image>
-                        <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="maps"></van-image>
-                        <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="maps"></van-image>
-                        <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="maps"></van-image>
-                    </view>
-                </scroll-view>
+      </view>
+      <view class="modelScore">
+        <view class="leftParts">
+          <view style="font-size: 30rpx;color: #515F7D;padding-left: 20rpx;padding-top: 20rpx;">
+            模型评分
+          </view>
+          <view style="width: 50%;margin-left: 20rpx;">
+            <view style="font-size: 25rpx;margin-right: 10rpx;">9-10</view>
+            <view style="margin-left: 30px;margin-top: -20rpx;">
+              <van-progress color="#FE8D19" percentage="75" track-color="#FFEEDA" stroke-width="4px"></van-progress>
+
             </view>
-            <view class="information" id="messages">
-                <view class="informationText">
-                    模型参数
-                </view>
-                <view class="informationTexts">
-                    <view style="width: 130rpx;  text-align-last: justify;">
-                        制作厂商
-                    </view>
-                    <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
-                        {{manufacturer}}
-                    </view>
-                </view>
-                <view class="informationTexts">
-                    <view style="width: 130rpx;  text-align-last: justify;">
-                        品牌系列
-                    </view>
-                    <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
-                        {{brand}}
-                    </view>
-                </view>
-                <view class="informationTexts">
-                    <view style="width: 130rpx;  text-align-last: justify;">
-                        产品比例
-                    </view>
-                    <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
-                        {{product}}
-                    </view>
-                </view>
-                <view class="informationTexts">
-                    <view style="width: 130rpx;  text-align-last: justify;">
-                        尺寸信息
-                    </view>
-                    <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
-                        {{size}}
-                    </view>
-                </view>
-                <view class="informationTexts">
-                    <view style="width: 130rpx;  text-align-last: justify;">
-                        重量
-                    </view>
-                    <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
-                        {{weight}}
-                    </view>
-                </view>
-                <view class="informationTexts">
-                    <view style="width: 130rpx;  text-align-last: justify;">
-                        发售时间
-                    </view>
-                    <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
-                        {{createTime}}
-                    </view>
-                </view>
+            <view>
             </view>
-            <view class="rate" id="evaluates">
-                <view style="display: flex;">
-                    <view class="rateText">玩家评价</view>
-                    <van-button type="default" size="small" color="{{selectPopular ? '#6BBFF9' : '#fff'}}" round bindtap="changePopular" class="popularest">
-                        <text class="{{selectPopular?'selectPopularText':'popularText'}}">热门</text>
-                    </van-button>
-                    <van-button type="default" size="small" color="{{selectNew ? '#6BBFF9' : '#fff'}}" round bindtap="changeNew" class="newest">
-                        <view class="{{selectNew?'selectNewText':'newText'}}">最新</view>
-                    </van-button>
-                </view>
-                <view class="ratePart">
-                    <van-image round width="2.8rem" height="2.8rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg"></van-image>
-                    <view style="margin-left: 120rpx;margin-top: -100rpx;">用户账户名</view>
-                    <view style="margin-left: 120rpx;margin-top:10rpx;font-size: small;color: darkgray;">2023-09-12 10:35</view>
-                    <view style="color: darkgray;font-size: 25rpx;margin-top: -85rpx;float: right;">
-                        非常推荐
-                        <text style="color: black;font-size: medium;">9.0分</text>
-                    </view>
-                    <view style="margin-top: -40rpx; float: right;">
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                    </view>
-                    <view class="topIntroduct">
-                        <view class="text {{introductFlag ?'foldIntroduct':''}} ">
-                            <!-- {{bookDetailData.bookIntroduct}} -->
-                            用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价
-                            <view class="fold" bindtap="fold" data-text="{{foldText}}" data-etc="{{textEtc}}"></view>
-                        </view>
-                    </view>
-                    <scroll-view scroll-x>
-                        <view style="display: flex;">
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                        </view>
-                    </scroll-view>
-                    <block>
-                        <view wx:if="isLike">
-                            <van-icon name="{{isLike ? 'good-job' :'good-job-o'}} " color="{{isLike?'#4083F5' :''}}" size="50rpx" bindtap="{{isLike ? 'cancelLike' :'onLike'}}" />
-                            <text style="color:{{isLike ? '#4083F5' :''}}">123</text>
-                        </view>
-                    </block>
-                    <view style="margin-top:-40rpx ;margin-left: 600rpx;">
-                        <van-icon name="ellipsis" bindtap="openSelect" />
-                    </view>
-                    <van-action-sheet show="{{ showActionSheet }}"
-                     bind:select="onSelectActionSheet" 
-                     bind:cancel="onActionSheetClose" 
-                     actions="{{ actions }}" 
-                     bind:close="onActionSheetClose"
-                      cancel-text="取消" 
-                      close-on-click-overlay="true" />
-                    <van-dialog use-slot
-                      show="{{ showDelRate }}"
-                       show-cancel-button 
-                        bind:cancel="onDelRateCancel"
-                         bind:getuserinfo="getUserInfo"
-                         bind:confirm="delRate"
-                         >
-                         <view style="text-align: center;margin-top: 30rpx;margin-bottom:30rpx;font-size: 40rpx;">确定删除该评论吗？</view>
-                         </van-dialog>
-                         <van-popup
-                         show="{{ showEditRate }}"
-                        position="bottom"
-                        custom-style="height: 20%;"
-                        bind:close="onEditRateClose"
-                        >
-                        <view>11111111</view>
-                        </van-popup>
-                </view>
-                <view class="ratePart">
-                    <van-image round width="2.8rem" height="2.8rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg"></van-image>
-                    <view style="margin-left: 120rpx;margin-top: -100rpx;">用户账户名</view>
-                    <view style="margin-left: 120rpx;margin-top:10rpx;font-size: small;color: darkgray;">2023-09-12 10:35</view>
-                    <view style="color: darkgray;font-size: 25rpx;margin-top: -85rpx;float: right;">
-                        非常推荐
-                        <text style="color: black;font-size: medium;">9.0分</text>
-                    </view>
-                    <view style="margin-top: -40rpx; float: right;">
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                    </view>
-                    <view class="topIntroduct">
-                        <view class="text {{introductFlag ?'foldIntroduct':''}} ">
-                            <!-- {{bookDetailData.bookIntroduct}} -->
-                            用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价
-                            <view class="fold" bindtap="fold" data-text="{{foldText}}" data-etc="{{textEtc}}"></view>
-                        </view>
-                    </view>
-                    <scroll-view scroll-x>
-                        <view style="display: flex;">
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                        </view>
-                    </scroll-view>
-                    <block>
-                        <view wx:if="isLike">
-                            <van-icon name="{{isLike ? 'good-job' :'good-job-o'}} " color="{{isLike?'#4083F5' :''}}" size="50rpx" bindtap="{{isLike ? 'cancelLike' :'onLike'}}" />
-                            <text style="color:{{isLike ? '#4083F5' :''}}">123</text>
-                        </view>
-                    </block>
+          </view>
+          <view style="width: 50%;margin-left: 20rpx;margin-top: 10rpx;">
+            <view style="font-size: 25rpx;margin-right: 10rpx;">7-8</view>
+            <view style="margin-left: 30px;margin-top: -20rpx;">
+              <van-progress color="#FE8D19" percentage="60" track-color="#FFEEDA" stroke-width="4px"></van-progress>
 
-                </view>
-                <view class="ratePart">
-                    <van-image round width="2.8rem" height="2.8rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg"></van-image>
-                    <view style="margin-left: 120rpx;margin-top: -100rpx;">用户账户名</view>
-                    <view style="margin-left: 120rpx;margin-top:10rpx;font-size: small;color: darkgray;">2023-09-12 10:35</view>
-                    <view style="color: darkgray;font-size: 25rpx;margin-top: -85rpx;float: right;">
-                        非常推荐
-                        <text style="color: black;font-size: medium;">9.0分</text>
-                    </view>
-                    <view style="margin-top: -40rpx; float: right;">
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                    </view>
-                    <view class="topIntroduct">
-                        <view class="text {{introductFlag ?'foldIntroduct':''}} ">
-                            <!-- {{bookDetailData.bookIntroduct}} -->
-                            用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价
-                            <view class="fold" bindtap="fold" data-text="{{foldText}}" data-etc="{{textEtc}}"></view>
-                        </view>
-                    </view>
-                    <scroll-view scroll-x>
-                        <view style="display: flex;">
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                        </view>
-                    </scroll-view>
-                    <block>
-                        <view wx:if="isLike">
-                            <van-icon name="{{isLike ? 'good-job' :'good-job-o'}} " color="{{isLike?'#4083F5' :''}}" size="50rpx" bindtap="{{isLike ? 'cancelLike' :'onLike'}}" />
-                            <text style="color:{{isLike ? '#4083F5' :''}}">123</text>
-                        </view>
-                    </block>
-
-                </view>
-                <view class="ratePart">
-                    <van-image round width="2.8rem" height="2.8rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg"></van-image>
-                    <view style="margin-left: 120rpx;margin-top: -100rpx;">用户账户名</view>
-                    <view style="margin-left: 120rpx;margin-top:10rpx;font-size: small;color: darkgray;">2023-09-12 10:35</view>
-                    <view style="color: darkgray;font-size: 25rpx;margin-top: -85rpx;float: right;">
-                        非常推荐
-                        <text style="color: black;font-size: medium;">9.0分</text>
-                    </view>
-                    <view style="margin-top: -40rpx; float: right;">
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                    </view>
-                    <view class="topIntroduct">
-                        <view class="text {{introductFlag ?'foldIntroduct':''}} ">
-                            <!-- {{bookDetailData.bookIntroduct}} -->
-                            用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价
-                            <view class="fold" bindtap="fold" data-text="{{foldText}}" data-etc="{{textEtc}}"></view>
-                        </view>
-                    </view>
-                    <scroll-view scroll-x>
-                        <view style="display: flex;">
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                        </view>
-                    </scroll-view>
-                    <block>
-                        <view wx:if="isLike">
-                            <van-icon name="{{isLike ? 'good-job' :'good-job-o'}} " color="{{isLike?'#4083F5' :''}}" size="50rpx" bindtap="{{isLike ? 'cancelLike' :'onLike'}}" />
-                            <text style="color:{{isLike ? '#4083F5' :''}}">123</text>
-                        </view>
-                    </block>
-
-                </view>
-                <view class="ratePart">
-                    <van-image round width="2.8rem" height="2.8rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg"></van-image>
-                    <view style="margin-left: 120rpx;margin-top: -100rpx;">用户账户名</view>
-                    <view style="margin-left: 120rpx;margin-top:10rpx;font-size: small;color: darkgray;">2023-09-12 10:35</view>
-                    <view style="color: darkgray;font-size: 25rpx;margin-top: -85rpx;float: right;">
-                        非常推荐
-                        <text style="color: black;font-size: medium;">9.0分</text>
-                    </view>
-                    <view style="margin-top: -40rpx; float: right;">
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                    </view>
-                    <view class="topIntroduct">
-                        <view class="text {{introductFlag ?'foldIntroduct':''}} ">
-                            <!-- {{bookDetailData.bookIntroduct}} -->
-                            用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价
-                            <view class="fold" bindtap="fold" data-text="{{foldText}}" data-etc="{{textEtc}}"></view>
-                        </view>
-                    </view>
-                    <scroll-view scroll-x>
-                        <view style="display: flex;">
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                        </view>
-                    </scroll-view>
-                    <block>
-                        <view wx:if="isLike">
-                            <van-icon name="{{isLike ? 'good-job' :'good-job-o'}} " color="{{isLike?'#4083F5' :''}}" size="50rpx" bindtap="{{isLike ? 'cancelLike' :'onLike'}}" />
-                            <text style="color:{{isLike ? '#4083F5' :''}}">123</text>
-                        </view>
-                    </block>
-
-                </view>
-                <view class="ratePart">
-                    <van-image round width="2.8rem" height="2.8rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg"></van-image>
-                    <view style="margin-left: 120rpx;margin-top: -100rpx;">用户账户名</view>
-                    <view style="margin-left: 120rpx;margin-top:10rpx;font-size: small;color: darkgray;">2023-09-12 10:35</view>
-                    <view style="color: darkgray;font-size: 25rpx;margin-top: -85rpx;float: right;">
-                        非常推荐
-                        <text style="color: black;font-size: medium;">9.0分</text>
-                    </view>
-                    <view style="margin-top: -40rpx; float: right;">
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                        <van-icon name="star" color="#FE8D19" />
-                    </view>
-                    <view class="topIntroduct">
-                        <view class="text {{introductFlag ?'foldIntroduct':''}} ">
-                            <!-- {{bookDetailData.bookIntroduct}} -->
-                            用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价
-                            <view class="fold" bindtap="fold" data-text="{{foldText}}" data-etc="{{textEtc}}"></view>
-                        </view>
-                    </view>
-                    <scroll-view scroll-x>
-                        <view style="display: flex;">
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
-                        </view>
-                    </scroll-view>
-                    <block>
-                        <view wx:if="isLike">
-                            <van-icon name="{{isLike ? 'good-job' :'good-job-o'}} " color="{{isLike?'#4083F5' :''}}" size="50rpx" bindtap="{{isLike ? 'cancelLike' :'onLike'}}" />
-                            <text style="color:{{isLike ? '#4083F5' :''}}">123</text>
-                        </view>
-                    </block>
-
-                </view>
             </view>
-        </scroll-view>
+            <view>
+            </view>
+          </view>
+          <view style="width: 50%;margin-left: 20rpx;margin-top: 10rpx">
+            <view style="font-size: 25rpx;margin-right: 10rpx;">5-6</view>
+            <view style="margin-left: 30px;margin-top: -20rpx;">
+              <van-progress color="#FE8D19" percentage="45" track-color="#FFEEDA" stroke-width="4px"></van-progress>
 
+            </view>
+            <view>
+            </view>
+          </view>
+          <view style="width: 50%;margin-left: 20rpx;margin-top: 10rpx">
+            <view style="font-size: 25rpx;margin-right: 10rpx;">3-4</view>
+            <view style="margin-left: 30px;margin-top: -20rpx;">
+              <van-progress color="#FE8D19" percentage="30" track-color="#FFEEDA" stroke-width="4px"></van-progress>
 
+            </view>
+            <view>
+            </view>
+          </view>
+          <view style="width: 50%;margin-left: 20rpx;margin-top: 10rpx">
+            <view style="font-size: 25rpx;margin-right: 10rpx;">1-2</view>
+            <view style="margin-left: 30px;margin-top: -20rpx;">
+              <van-progress color="#FE8D19" percentage="15" track-color="#FFEEDA" stroke-width="4px"></van-progress>
 
+            </view>
+            <view>
+            </view>
+          </view>
+        </view>
+        <view class="rightParts">
+          <view style="font-size: x-large;font-weight: bold;">9.0</view>
+          <view style="margin-top: -50rpx;margin-left: 90rpx;">非常推荐</view>
+          <view style="color: #9CA5B6;font-size: 25rpx;margin-top: 30rpx;">xxx人已入</view>
+          <view style="color: #9CA5B6;font-size: 25rpx;margin-left: 130rpx;margin-top: -35rpx;">xxx人想要</view>
+        </view>
+      </view>
     </view>
+    <scroll-view class="tab stickyClass" scroll-with-animation="true" scroll-into-view='{{indexMaodian}}'>
+      <view bindtap='clickMenu' class="tab-item {{currentTab == 'modelPages' ? 'active' : ''}}" data-id="modelPages" id='modelPage'>模型图</view>
+      <view bindtap='clickMenu' class="tab-item {{currentTab == 'messages' ? 'active' : ''}}" data-id="messages" id='message'>资料</view>
+      <view bindtap='clickMenu' class="tab-item {{currentTab == 'evaluates' ? 'active' : ''}}" data-id="evaluates" id='evaluate'>评价</view>
+    </scroll-view>
+    <scroll-view scroll-into-view='{{storeDetail}}' style="height: 1200rpx;" scroll-y class="scroll-two" bindscroll="onPageScroll">
+      <view class="advertisingMap" id="modelPages">
+        <view class="advertisingMapText">官方宣传图</view>
+        <scroll-view scroll-x>
+          <view style="display: flex;">
+            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="maps"></van-image>
+            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="maps"></van-image>
+            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="maps"></van-image>
+            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="maps"></van-image>
+            <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="maps"></van-image>
+          </view>
+        </scroll-view>
+      </view>
+      <view class="information" id="messages">
+        <view class="informationText">
+          模型参数
+        </view>
+        <view class="informationTexts">
+          <view style="width: 130rpx;  text-align-last: justify;">
+            制作厂商
+          </view>
+          <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
+            {{manufacturer}}
+          </view>
+        </view>
+        <view class="informationTexts">
+          <view style="width: 130rpx;  text-align-last: justify;">
+            品牌系列
+          </view>
+          <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
+            {{brand}}
+          </view>
+        </view>
+        <view class="informationTexts">
+          <view style="width: 130rpx;  text-align-last: justify;">
+            产品比例
+          </view>
+          <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
+            {{product}}
+          </view>
+        </view>
+        <view class="informationTexts">
+          <view style="width: 130rpx;  text-align-last: justify;">
+            尺寸信息
+          </view>
+          <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
+            {{size}}
+          </view>
+        </view>
+        <view class="informationTexts">
+          <view style="width: 130rpx;  text-align-last: justify;">
+            重量
+          </view>
+          <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
+            {{weight}}
+          </view>
+        </view>
+        <view class="informationTexts">
+          <view style="width: 130rpx;  text-align-last: justify;">
+            发售时间
+          </view>
+          <view style="margin-left: 30rpx; line-height: 50rpx;font-size: 30rpx;">
+            {{createTime}}
+          </view>
+        </view>
+      </view>
+      <view class="rate" id="evaluates">
+        <view style="display: flex;">
+          <view class="rateText">玩家评价</view>
+          <van-button type="default" size="small" color="{{selectPopular ? '#6BBFF9' : '#fff'}}" round bindtap="changePopular" class="popularest">
+            <text class="{{selectPopular?'selectPopularText':'popularText'}}">热门</text>
+          </van-button>
+          <van-button type="default" size="small" color="{{selectNew ? '#6BBFF9' : '#fff'}}" round bindtap="changeNew" class="newest">
+            <view class="{{selectNew?'selectNewText':'newText'}}">最新</view>
+          </van-button>
+        </view>
+        <view class="ratePart">
+          <van-image round width="2.8rem" height="2.8rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg"></van-image>
+          <view style="margin-left: 120rpx;margin-top: -100rpx;">用户账户名</view>
+          <view style="margin-left: 120rpx;margin-top:10rpx;font-size: small;color: darkgray;">2023-09-12 10:35</view>
+          <view style="color: darkgray;font-size: 25rpx;margin-top: -85rpx;float: right;">
+            非常推荐
+            <text style="color: black;font-size: medium;">9.0分</text>
+          </view>
+          <view style="margin-top: -40rpx; float: right;">
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+          </view>
+          <view class="topIntroduct">
+            <view class="text {{introductFlag ?'foldIntroduct':''}} ">
+              <!-- {{bookDetailData.bookIntroduct}} -->
+              用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价
+              <view class="fold" bindtap="fold" data-text="{{foldText}}" data-etc="{{textEtc}}"></view>
+            </view>
+          </view>
+          <scroll-view scroll-x>
+            <view style="display: flex;">
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+            </view>
+          </scroll-view>
+          <block>
+            <view wx:if="isLike">
+              <van-icon name="{{isLike ? 'good-job' :'good-job-o'}} " color="{{isLike?'#4083F5' :''}}" size="50rpx" bindtap="{{isLike ? 'cancelLike' :'onLike'}}" />
+              <text style="color:{{isLike ? '#4083F5' :''}}">123</text>
+            </view>
+          </block>
+          <view style="margin-top:-40rpx ;margin-left: 600rpx;">
+            <van-icon name="ellipsis" bindtap="openSelect" />
+          </view>
+          <van-action-sheet show="{{ showActionSheet }}" bind:select="onSelectActionSheet" bind:cancel="onActionSheetClose" actions="{{ actions }}" bind:close="onActionSheetClose" cancel-text="取消" close-on-click-overlay="true" />
+          <van-dialog use-slot show="{{ showDelRate }}" show-cancel-button bind:cancel="onDelRateCancel" bind:getuserinfo="getUserInfo" bind:confirm="delRate">
+            <view style="text-align: center;margin-top: 30rpx;margin-bottom:30rpx;font-size: 40rpx;">确定删除该评论吗？</view>
+          </van-dialog>
+          <van-overlay show="{{ showEditRate }}" bind:click="onEditRateClose" z-index="9999" lock-scroll>
+            <view class="wrapper">
+              <view class="block" catch:tap="noop">
+                <view class="editPageNav">
+                  恭喜入手，点评一下吧！
+                </view>
+                <view>
+                <view style="margin: 20rpx;">
+                  模型评分
+                </view>
+                    <view wx:for="{{buttonList}}" wx:key="index" class="scoreBtns">
+                      <van-button  bind:click="selectScore" custom-style="width:51rpx;height:60rpx;margin-left:10rpx;background-color:{{isSelectScoreBtn == item.num ? '#409eff' : '#ADB7CA'}};" type="default" id="{{item.num}}" ><text style="font-size: 20rpx;color: #F6F9FE;">{{item.num}}</text></van-button>
+                    </view>
+                    <view class="scoreText">
+                      <text style="font-size: 25rpx;color:{{noRecommend ? '#409eff' :'#ADB7CA'}} ;">避雷不推荐</text>
+                    <text style="font-size: 25rpx;color: #ADB7CA;margin-left: -95rpx;">一般</text>
+                    <text style="font-size: 25rpx;color: #ADB7CA;">非常推荐</text>
+                    </view>
+                 
+              
+                </view>
+              </view>
+            </view>
+          </van-overlay>
+
+        </view>
+        <view class="ratePart">
+          <van-image round width="2.8rem" height="2.8rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg"></van-image>
+          <view style="margin-left: 120rpx;margin-top: -100rpx;">用户账户名</view>
+          <view style="margin-left: 120rpx;margin-top:10rpx;font-size: small;color: darkgray;">2023-09-12 10:35</view>
+          <view style="color: darkgray;font-size: 25rpx;margin-top: -85rpx;float: right;">
+            非常推荐
+            <text style="color: black;font-size: medium;">9.0分</text>
+          </view>
+          <view style="margin-top: -40rpx; float: right;">
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+          </view>
+          <view class="topIntroduct">
+            <view class="text {{introductFlag ?'foldIntroduct':''}} ">
+              <!-- {{bookDetailData.bookIntroduct}} -->
+              用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价
+              <view class="fold" bindtap="fold" data-text="{{foldText}}" data-etc="{{textEtc}}"></view>
+            </view>
+          </view>
+          <scroll-view scroll-x>
+            <view style="display: flex;">
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+            </view>
+          </scroll-view>
+          <block>
+            <view wx:if="isLike">
+              <van-icon name="{{isLike ? 'good-job' :'good-job-o'}} " color="{{isLike?'#4083F5' :''}}" size="50rpx" bindtap="{{isLike ? 'cancelLike' :'onLike'}}" />
+              <text style="color:{{isLike ? '#4083F5' :''}}">123</text>
+            </view>
+          </block>
+
+        </view>
+        <view class="ratePart">
+          <van-image round width="2.8rem" height="2.8rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg"></van-image>
+          <view style="margin-left: 120rpx;margin-top: -100rpx;">用户账户名</view>
+          <view style="margin-left: 120rpx;margin-top:10rpx;font-size: small;color: darkgray;">2023-09-12 10:35</view>
+          <view style="color: darkgray;font-size: 25rpx;margin-top: -85rpx;float: right;">
+            非常推荐
+            <text style="color: black;font-size: medium;">9.0分</text>
+          </view>
+          <view style="margin-top: -40rpx; float: right;">
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+          </view>
+          <view class="topIntroduct">
+            <view class="text {{introductFlag ?'foldIntroduct':''}} ">
+              <!-- {{bookDetailData.bookIntroduct}} -->
+              用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价
+              <view class="fold" bindtap="fold" data-text="{{foldText}}" data-etc="{{textEtc}}"></view>
+            </view>
+          </view>
+          <scroll-view scroll-x>
+            <view style="display: flex;">
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+            </view>
+          </scroll-view>
+          <block>
+            <view wx:if="isLike">
+              <van-icon name="{{isLike ? 'good-job' :'good-job-o'}} " color="{{isLike?'#4083F5' :''}}" size="50rpx" bindtap="{{isLike ? 'cancelLike' :'onLike'}}" />
+              <text style="color:{{isLike ? '#4083F5' :''}}">123</text>
+            </view>
+          </block>
+
+        </view>
+        <view class="ratePart">
+          <van-image round width="2.8rem" height="2.8rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg"></van-image>
+          <view style="margin-left: 120rpx;margin-top: -100rpx;">用户账户名</view>
+          <view style="margin-left: 120rpx;margin-top:10rpx;font-size: small;color: darkgray;">2023-09-12 10:35</view>
+          <view style="color: darkgray;font-size: 25rpx;margin-top: -85rpx;float: right;">
+            非常推荐
+            <text style="color: black;font-size: medium;">9.0分</text>
+          </view>
+          <view style="margin-top: -40rpx; float: right;">
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+          </view>
+          <view class="topIntroduct">
+            <view class="text {{introductFlag ?'foldIntroduct':''}} ">
+              <!-- {{bookDetailData.bookIntroduct}} -->
+              用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价
+              <view class="fold" bindtap="fold" data-text="{{foldText}}" data-etc="{{textEtc}}"></view>
+            </view>
+          </view>
+          <scroll-view scroll-x>
+            <view style="display: flex;">
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+            </view>
+          </scroll-view>
+          <block>
+            <view wx:if="isLike">
+              <van-icon name="{{isLike ? 'good-job' :'good-job-o'}} " color="{{isLike?'#4083F5' :''}}" size="50rpx" bindtap="{{isLike ? 'cancelLike' :'onLike'}}" />
+              <text style="color:{{isLike ? '#4083F5' :''}}">123</text>
+            </view>
+          </block>
+
+        </view>
+        <view class="ratePart">
+          <van-image round width="2.8rem" height="2.8rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg"></van-image>
+          <view style="margin-left: 120rpx;margin-top: -100rpx;">用户账户名</view>
+          <view style="margin-left: 120rpx;margin-top:10rpx;font-size: small;color: darkgray;">2023-09-12 10:35</view>
+          <view style="color: darkgray;font-size: 25rpx;margin-top: -85rpx;float: right;">
+            非常推荐
+            <text style="color: black;font-size: medium;">9.0分</text>
+          </view>
+          <view style="margin-top: -40rpx; float: right;">
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+          </view>
+          <view class="topIntroduct">
+            <view class="text {{introductFlag ?'foldIntroduct':''}} ">
+              <!-- {{bookDetailData.bookIntroduct}} -->
+              用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价
+              <view class="fold" bindtap="fold" data-text="{{foldText}}" data-etc="{{textEtc}}"></view>
+            </view>
+          </view>
+          <scroll-view scroll-x>
+            <view style="display: flex;">
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+            </view>
+          </scroll-view>
+          <block>
+            <view wx:if="isLike">
+              <van-icon name="{{isLike ? 'good-job' :'good-job-o'}} " color="{{isLike?'#4083F5' :''}}" size="50rpx" bindtap="{{isLike ? 'cancelLike' :'onLike'}}" />
+              <text style="color:{{isLike ? '#4083F5' :''}}">123</text>
+            </view>
+          </block>
+
+        </view>
+        <view class="ratePart">
+          <van-image round width="2.8rem" height="2.8rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg"></van-image>
+          <view style="margin-left: 120rpx;margin-top: -100rpx;">用户账户名</view>
+          <view style="margin-left: 120rpx;margin-top:10rpx;font-size: small;color: darkgray;">2023-09-12 10:35</view>
+          <view style="color: darkgray;font-size: 25rpx;margin-top: -85rpx;float: right;">
+            非常推荐
+            <text style="color: black;font-size: medium;">9.0分</text>
+          </view>
+          <view style="margin-top: -40rpx; float: right;">
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+          </view>
+          <view class="topIntroduct">
+            <view class="text {{introductFlag ?'foldIntroduct':''}} ">
+              <!-- {{bookDetailData.bookIntroduct}} -->
+              用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价
+              <view class="fold" bindtap="fold" data-text="{{foldText}}" data-etc="{{textEtc}}"></view>
+            </view>
+          </view>
+          <scroll-view scroll-x>
+            <view style="display: flex;">
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+            </view>
+          </scroll-view>
+          <block>
+            <view wx:if="isLike">
+              <van-icon name="{{isLike ? 'good-job' :'good-job-o'}} " color="{{isLike?'#4083F5' :''}}" size="50rpx" bindtap="{{isLike ? 'cancelLike' :'onLike'}}" />
+              <text style="color:{{isLike ? '#4083F5' :''}}">123</text>
+            </view>
+          </block>
+
+        </view>
+      </view>
+
+    </scroll-view>
+
+
+
+  </view>
 </view>
