@@ -58,31 +58,10 @@ Page({
     })
   },
   selectScore:function(e) {
-    console.log(e.currentTarget.id);
     const id = e.currentTarget.id
     this.setData({
       isSelectScoreBtn:id
     })
-
-    if(id>=1&&id<=3){
-      this.setData({
-        noRecommend:true,
-        general:false,//一般
-        highRecommend:false//非常推荐
-      })
-    }else if(id== 5){
-      this.setData({
-        noRecommend:false,
-        general:true,//一般
-        highRecommend:false//非常推荐
-      })
-    }else if(id>8 && id<=10){
-      this.setData({
-        noRecommend:false,
-        general:false,//一般
-        highRecommend:true//非常推荐
-      })
-    }
   },
   onLike() {
     this.setData({

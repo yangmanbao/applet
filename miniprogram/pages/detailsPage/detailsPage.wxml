@@ -258,9 +258,9 @@
                       <van-button  bind:click="selectScore" custom-style="width:51rpx;height:60rpx;margin-left:10rpx;background-color:{{isSelectScoreBtn == item.num ? '#409eff' : '#ADB7CA'}};" type="default" id="{{item.num}}" ><text style="font-size: 20rpx;color: #F6F9FE;">{{item.num}}</text></van-button>
                     </view>
                     <view class="scoreText">
-                      <text style="font-size: 25rpx;color:{{noRecommend ? '#409eff' :'#ADB7CA'}} ;">避雷不推荐</text>
-                    <text style="font-size: 25rpx;color: #ADB7CA;margin-left: -95rpx;">一般</text>
-                    <text style="font-size: 25rpx;color: #ADB7CA;">非常推荐</text>
+                      <text style="font-size: 25rpx;color:{{isSelectScoreBtn == 1 ? '#409eff' :'#ADB7CA'}} ;">避雷不推荐</text>
+                    <text style="font-size: 25rpx;color:{{isSelectScoreBtn == 5 ? '#409eff' :'#ADB7CA'}} ;margin-left: -95rpx;">一般</text>
+                    <text style="font-size: 25rpx;color:{{isSelectScoreBtn == 10 ? '#409eff' :'#ADB7CA'}} ;">非常推荐</text>
                     </view>
                  
               
