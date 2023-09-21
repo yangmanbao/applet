@@ -1,7 +1,9 @@
 {
   "pages": [
-    "pages/detailsPage/detailsPage",
+    "pages/brandDetail/brandDetail",
+    "pages/shop/shop",
     "pages/home/home",
+    "pages/detailsPage/detailsPage",
     "pages/user/user",
     "pages/editBrandPage/editBrandPage",
     "pages/brandManagePage/brandManagePage",
@@ -11,7 +13,6 @@
     "pages/manageModelPage/manageModelPage",
     "pages/addBrandPage/addBrandPage",
     "pages/test2/test2",
-    "pages/shop/shop",
     "pages/test/test",
     "pages/logs/logs"
   ],
@@ -61,6 +62,8 @@
     "van-uploader": "/miniprogram_npm/@vant/weapp/uploader/index",
     "van-progress": "/miniprogram_npm/@vant/weapp/progress/index",
     "van-action-sheet": "/miniprogram_npm/@vant/weapp/action-sheet/index",
-    "van-overlay": "/miniprogram_npm/@vant/weapp/overlay/index"
+    "van-overlay": "/miniprogram_npm/@vant/weapp/overlay/index",
+    "van-field": "/miniprogram_npm/@vant/weapp/field/index",
+    "van-notify": "/miniprogram_npm/@vant/weapp/notify/index"
   }
 }

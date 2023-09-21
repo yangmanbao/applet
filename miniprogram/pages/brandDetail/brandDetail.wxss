@@ -1,0 +1,91 @@
+/* pages/brandDetail/brandDetail.wxss */
+.mainParts{
+  height: calc(100vh-'{{navBarHeight}}px');
+}
+.nav{
+  
+  height:170rpx ;
+  background-color: #4098fc;
+}
+.brandNameParts{
+  width: 95%;
+  height: 320rpx;
+  background-color: #fff;
+  margin-top: -150rpx;
+  margin-left: 19rpx;
+  border-radius: 30rpx;
+}
+.tab {
+  width: 100%;
+  margin-top: 10rpx;
+  top: 120rpx;
+  left: 0;
+  z-index: 100;
+  white-space: nowrap;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 80rpx;
+  background: #F6F9FE;
+  border-bottom: 2rpx solid #f5f5f5;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.tab-item {
+  display: inline-block;
+  text-align: center;
+  font-size: 30rpx;
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+  z-index: 999;
+  /* margin-right: 70rpx;
+  margin-left: 20rpx; */
+}
+
+.active {
+  border-bottom: 5rpx solid #5687F6;
+  color: #5687F6;
+}
+
+.brandName{
+  margin-top: -160rpx;
+  margin-left: 190rpx;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.brandIntroduce{
+  margin-top: 20rpx;
+  margin-left: 190rpx;
+  font-size: 30rpx;
+  color:#515F7D;
+}
+
+.popularest {
+  margin-left: 275rpx;
+  margin-top: 10rpx;
+}
+.popularText{
+  font-size: 28rpx;
+  font-weight: bold;
+  color:#515F7D
+}
+.selectPopularest {
+  margin-left: 285rpx;
+  margin-top: 10rpx;
+}
+
+.newest {
+  margin-left: 15rpx;
+  margin-top: 10rpx;
+  
+}
+.newText{
+  font-size: 28rpx;
+  font-weight: bold;
+  color:#515F7D
+}
+.selectNewText {
+  font-size: 28rpx;
+  color:#fff;
+}

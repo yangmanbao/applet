@@ -1,2 +1,35 @@
 <!--pages/shop/shop.wxml-->
-<text>pages/shop/shop.wxml</text>
+<view>
+  <!-- 自定义导航栏 -->
+  <view class="nav-bar" style="height:{{navBarHeight}}px;background-color: #F6F9FE;">
+    <view class="title" style="height:{{menuHeight}}px;bottom:{{menuBottom}}px;line-height:{{menuHeight}}px;display: flex;">
+      <view style="margin-left: 290rpx;font-size:35rpx;font-weight: bold;margin-top: 45rpx;">恐龙时光社</view>
+    </view>
+  </view>
+  <scroll-view class="mainParts" scroll-y>
+    <view class="tab stickyClass">
+      <view bindtap='clickMenu' class="tab-item {{currentTab == 'newModel' ? 'active' : ''}}" data-id="newModel" >最新模型</view>
+      <view bindtap='clickMenu' class="tab-item {{currentTab == 'watchBrand' ? 'active' : ''}}" data-id="watchBrand" >品牌一览</view>
+    </view>
+    <view   hidden="{{!(currentTab == 'newModel')}}">
+      111111
+    </view>
+    <view  hidden="{{!(currentTab == 'watchBrand')}}">
+        <!-- 表格主题 -->
+    <view class="table">
+      <view class="trNav">
+        <view class="th-sign">标志</view>
+        <view class="th-brand">品牌名称</view>
+        <view class="th-modelNum">模型数</view>
+      </view>
+      <block>
+        <view class="tr" wx:for="{{listdata}}" wx:key="index" bindtap="brandDetailPage">
+          <van-image  width="2.8rem" height="2.8rem" fit="cover" src="{{item.sign}}" class="td-sign" />
+          <view class="td-brand">{{item.brand}}</view>
+          <view class="td-modelNum">{{item.modelNum}}</view>
+        </view>
+      </block>
+    </view>
+    </view>
+  </scroll-view>
+</view>

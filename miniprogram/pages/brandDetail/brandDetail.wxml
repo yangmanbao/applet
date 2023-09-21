@@ -1,0 +1,90 @@
+<!--pages/brandDetail/brandDetail.wxml-->
+<view style="background-color: #F6F9FE;">
+  <!-- 自定义导航栏 -->
+  <view class="nav-bar" style="height:{{navBarHeight}}px;background-color: #4098fc;">
+    <view class="title" style="height:{{menuHeight}}px;bottom:{{menuBottom}}px;line-height:{{menuHeight}}px;display: flex;">
+      <van-icon name="arrow-left" size="25px" style="margin-top: 80rpx;" color="#fff" bindtap="backBtn" />
+      <view style="margin-left: 240rpx;font-size:35rpx;margin-top: 45rpx;color:#fff">恐龙时光社</view>
+    </view>
+  </view>
+
+  <view class="mainParts">
+    <view class="nav" />
+    <view class="brandNameParts">
+      <view style="padding: 20rpx;">
+        <van-image width="4.5rem" height="4.5rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="td-sign" />
+      </view>
+      <view class="brandName">
+        恐龙大王
+      </view>
+      <view class="brandIntroduce">
+        共发售200款商品
+      </view>
+      <view style="font-size: 25rpx; font-weight: bold;color:#515F7D;margin-top: 30rpx;margin-left:20rpx;">品牌简介：<text style="color:#515F7D;font-weight: 500;font-size: 30rpx;">11111111111</text></view>
+    </view>
+    <view class="modelParts">
+      <view class="tab">
+        <view bindtap='clickMenu' class="tab-item {{currentTab == 'allModel' ? 'active' : ''}}" data-id="allModel">全部模型</view>
+        <view bindtap='clickMenu' class="tab-item {{currentTab == 'growth' ? 'active' : ''}}" data-id="growth">成长陪伴</view>
+        <view bindtap='clickMenu' class="tab-item {{currentTab == 'museum' ? 'active' : ''}}" data-id="museum">博物馆</view>
+      </view>
+      <block>
+        <view wx:if="{{currentTab == 'allModel'}}">
+          <view id="allModel">
+            <view style="background-color: #fff;width: 95%;margin: 18rpx;border-radius: 30rpx;">
+              <view style="padding: 20rpx; font-size: 30rpx;">
+                模型一览
+                <van-button type="default" size="small" color="{{selectPopular ? '#6BBFF9' : '#fff'}}" round bindtap="changePopular" class="popularest">
+                  <text class="{{selectPopular?'selectPopularText':'popularText'}}">评分</text>
+                </van-button>
+                <van-button type="default" size="small" color="{{selectNew ? '#6BBFF9' : '#fff'}}" round bindtap="changeNew" class="newest">
+                  <text class="{{selectNew?'selectNewText':'newText'}}">最新</text>
+                </van-button>
+              </view>
+              <!-- <view wx:for="{{modelList}}" wx:key="index" style="display: inline;">
+                <view class="modelMsg">
+                  <van-image width="6rem" height="6rem" fit="cover" src="{{item.img}}" />
+                  <view style="font-size: 25rpx;font-weight: 700;">{{item.name}}</view>
+                  <view style="font-size: 23rpx;margin-top: 5rpx;">
+                    评分{{item.score}}<text style="color:#9CA5B6;margin-left: 10rpx;"> {{item.peopleNum}}人想要</text>
+                  </view>
+                </view>
+              </view> -->
+              <van-row>
+                <view wx:for="{{modelList}}" wx:key="index">
+                <van-col span="8" bindtap="changePage">
+                <view style="margin-bottom:20rpx;margin-left: 23rpx;">
+                  <van-image width="6rem" height="6rem" fit="cover" src="{{item.img}}" />
+                  <view style="font-size: 25rpx;font-weight: 700;">{{item.name}}</view>
+                  <view style="font-size: 23rpx;margin-top: 5rpx;">
+                    评分{{item.score}}<text style="color:#9CA5B6;margin-left: 10rpx;"> {{item.peopleNum}}人想要</text>
+                  </view>
+                </view>
+              
+                </van-col>
+              </view>
+              </van-row>
+           
+              <!-- <view class="modelMsg">
+                <van-image width="6rem" height="6rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="td-sign" />
+                <view style="font-size: 25rpx;font-weight: 700;">霸王龙威尔逊</view>
+                <view style="font-size: 23rpx;margin-top: 5rpx;">
+                  评分7.5<text style="color:#9CA5B6;margin-left: 10rpx;"> xxx人想要</text>
+                </view>
+              </view> -->
+            </view>
+
+          </view>
+        </view>
+        <view wx:elif="{{currentTab == 'growth'}}">
+          <view id="growth">222</view>
+        </view>
+        <view wx:elif="{{currentTab == 'museum'}}">
+          <view id="museum">333</view>
+        </view>
+      </block>
+
+
+    </view>
+  </view>
+</view>

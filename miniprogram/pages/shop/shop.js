@@ -1,18 +1,133 @@
 // pages/shop/shop.js
+const app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    navBarHeight: app.globalData.navBarHeight,
+    menuRight: app.globalData.menuRight,
+    menuBottom: app.globalData.menuBottom,
+    menuHeight: app.globalData.menuHeight,
+    currentTab: 'watchBrand',
+    listdata: [
+      {
+        "id": "1",
+        "sign": 'https://img.yzcdn.cn/vant/cat.jpeg',
+        "brand": "霸王龙威尔逊",
+        "modelNum": "7.5"
+      },
+      {
+        "id": "1",
+        "sign": 'https://img.yzcdn.cn/vant/cat.jpeg',
+        "brand": "霸王龙威尔逊",
+        "modelNum": "7.5"
+      },  {
+        "id": "1",
+        "sign": 'https://img.yzcdn.cn/vant/cat.jpeg',
+        "brand": "霸王龙威尔逊",
+        "modelNum": "7.5"
+      },  {
+        "id": "1",
+        "sign": 'https://img.yzcdn.cn/vant/cat.jpeg',
+        "brand": "霸王龙威尔逊",
+        "modelNum": "7.5"
+      },  {
+        "id": "1",
+        "sign": 'https://img.yzcdn.cn/vant/cat.jpeg',
+        "brand": "霸王龙威尔逊",
+        "modelNum": "7.5"
+      },  {
+        "id": "1",
+        "sign": 'https://img.yzcdn.cn/vant/cat.jpeg',
+        "brand": "霸王龙威尔逊",
+        "modelNum": "7.5"
+      },  {
+        "id": "1",
+        "sign": 'https://img.yzcdn.cn/vant/cat.jpeg',
+        "brand": "霸王龙威尔逊",
+        "modelNum": "7.5"
+      },  {
+        "id": "1",
+        "sign": 'https://img.yzcdn.cn/vant/cat.jpeg',
+        "brand": "霸王龙威尔逊",
+        "modelNum": "7.5"
+      },  {
+        "id": "1",
+        "sign": 'https://img.yzcdn.cn/vant/cat.jpeg',
+        "brand": "霸王龙威尔逊",
+        "modelNum": "7.5"
+      },  {
+        "id": "1",
+        "sign": 'https://img.yzcdn.cn/vant/cat.jpeg',
+        "brand": "霸王龙威尔逊",
+        "modelNum": "7.5"
+      },  {
+        "id": "1",
+        "sign": 'https://img.yzcdn.cn/vant/cat.jpeg',
+        "brand": "霸王龙威尔逊",
+        "modelNum": "7.5"
+      },  {
+        "id": "1",
+        "sign": 'https://img.yzcdn.cn/vant/cat.jpeg',
+        "brand": "霸王龙威尔逊",
+        "modelNum": "7.5"
+      },  {
+        "id": "1",
+        "sign": 'https://img.yzcdn.cn/vant/cat.jpeg',
+        "brand": "霸王龙威尔逊",
+        "modelNum": "7.5"
+      },  {
+        "id": "1",
+        "sign": 'https://img.yzcdn.cn/vant/cat.jpeg',
+        "brand": "霸王龙威尔逊",
+        "modelNum": "7.5"
+      },  {
+        "id": "1",
+        "sign": 'https://img.yzcdn.cn/vant/cat.jpeg',
+        "brand": "霸王龙威尔逊",
+        "modelNum": "7.5"
+      },  {
+        "id": "1",
+        "sign": 'https://img.yzcdn.cn/vant/cat.jpeg',
+        "brand": "霸王龙威尔逊",
+        "modelNum": "7.5"
+      },  {
+        "id": "1",
+        "sign": 'https://img.yzcdn.cn/vant/cat.jpeg',
+        "brand": "霸王龙威尔逊",
+        "modelNum": "7.5"
+      },  {
+        "id": "1",
+        "sign": 'https://img.yzcdn.cn/vant/cat.jpeg',
+        "brand": "霸王龙威尔逊",
+        "modelNum": "7.5"
+      },  {
+        "id": "1",
+        "sign": 'https://img.yzcdn.cn/vant/cat.jpeg',
+        "brand": "霸王龙威尔逊",
+        "modelNum": "7.5"
+      },
+    ],
   },
-
+  clickMenu: function (e) {
+    var current = e.currentTarget.dataset.id //获取当前tab的index
+    this.setData({
+        currentTab: current,
+    })
+    console.log(current);
+}, 
+brandDetailPage() {
+  wx.navigateTo({
+    url: '/pages/brandDetail/brandDetail'
+  })
+},
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
   },
 
   /**

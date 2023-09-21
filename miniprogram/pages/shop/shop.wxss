@@ -1,1 +1,120 @@
 /* pages/shop/shop.wxss */
+.mainParts{
+  /* height:100vh{{navBarHeight}}px; */
+ height: calc(100vh-'{{navBarHeight}}px');
+  background-color:#F6F9FE ;
+}
+
+.tab {
+  width: 100%;
+  top: 120rpx;
+  left: 0;
+  z-index: 100;
+  white-space: nowrap;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 80rpx;
+  background: #F6F9FE;
+  border-bottom: 2rpx solid #f5f5f5;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.tab-item {
+  display: inline-block;
+  text-align: center;
+  font-size: 30rpx;
+  z-index: 999;
+  margin-right: 80rpx;
+  margin-left: 20rpx;
+  color:#9CA5B6
+}
+.active {
+  border-bottom: 5rpx solid #5687F6;
+  color: #2E3E63;
+  font-weight: bold;
+}
+.table {
+  border: 0px solid rgb(116, 115, 115);
+  font-size: 12px;
+  background-color: #F6F9FE;
+  }
+  .trNav{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 4rem;
+    align-items: center;
+  }
+
+  .tr {
+  display: flex;
+  width: 95%;
+  justify-content: center;
+  height: 3.8rem;
+  margin-top: -25rpx;
+  margin-left: 38rpx;
+  align-items: center;
+  background-color: #fff;
+  margin-left:19rpx;
+}
+.td-sign{
+  width:18%;
+  font-size: x-large;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff;
+}
+.td-brand{
+  width:60%;
+  font-size: 30rpx;
+  font-weight: bold ;
+  padding-left: 30rpx;
+}
+
+.td-modelNum{
+  width:15%;
+  color: #515F7D;
+  font-weight: bold;
+  font-size: medium;
+  text-align: center;
+  padding-right: 20rpx;
+}
+
+.th-sign {
+  width: 18%;
+  justify-content: center;
+  background: #4083F5;
+  color: #fff;
+  display: flex;
+  height: 2.5rem;
+  align-items: center;
+  font-size: 30rpx;
+  border-top-left-radius: 30rpx;
+  margin-left: 20rpx;
+}
+.th-brand {
+  width: 60%;
+  /* justify-content: center; */
+  padding-left: 30rpx;
+  background: #4083F5;
+  color: #fff;
+  display: flex;
+  height: 2.5rem;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.th-modelNum {
+  width: 15%;
+  justify-content: center;
+  background: #4083F5;
+  color: #fff;
+  display: flex;
+  height: 2.5rem;
+  align-items: center;
+  font-size: 30rpx;
+  border-top-right-radius: 30rpx;
+  margin-right:20rpx ;
+  padding-right: 30rpx;
+}

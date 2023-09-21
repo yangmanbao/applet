@@ -1,4 +1,5 @@
 // pages/detailsPage/detailsPage.js
+import Notify from '../../miniprogram_npm/@vant/weapp/notify/notify';
 const app = getApp()
 Page({
 
@@ -26,7 +27,7 @@ Page({
     introductFlag: false, //设置点击时，是否出现全文还是出现省略号和展开按钮
     foldText: '展开', //控制简介中展开和收起的出现与否
     textEtc: "...", //控制简介中省略号的出现与否
-    isLike: true, //是否点赞
+    isLike: false, //是否点赞
     showActionSheet: false, //是否显示动作面板
     actions: [{
         name: '编辑点评'
@@ -45,8 +46,38 @@ Page({
     isSelectScoreBtn: 0,//是否选中按钮
     noRecommend:false,//是否不推荐
     general:false,//一般
-    highRecommend:false//非常推荐
+    highRecommend:false,//非常推荐
+    modelReviewValue:'',//修改的模型点评
+    modelImgFileList:[
+      {
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片1',
+      },
+      // Uploader 根据文件后缀来判断是否为图片文件
+      // 如果图片 URL 中不包含类型信息，可以添加 isImage 标记来声明
+      {
+        url: 'http://iph.href.lu/60x60?text=default',
+        name: '图片2',
+        isImage: true,
+        deletable: true,
+      },
+    ]
+  },
+  updateReview(){
+    Notify({ type: 'success', message: '修改成功！' });
+    console.log(11111111);
 
+    this.setData({
+      showEditRate:false
+    })
+  },
+  cancelReview(){
+    this.setData({
+      showEditRate:false
+    })
+  },
+  onModelReviewChange(e){
+    console.log(e.detail);
   },
   fold(e) {
     this.setData({

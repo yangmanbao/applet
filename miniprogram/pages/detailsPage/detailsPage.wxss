@@ -2,6 +2,7 @@
 .mainparts {
   background-color: #F6F9FE;
   padding: 10rpx;
+  height: calc(100vh-'{{navBarHeight}}px');
 }
 
 .mainNav {
@@ -291,4 +292,17 @@
   display: flex;
   align-items:center;
   justify-content: space-between;
+}
+
+
+.modelReview{
+  width: 93%;
+  height: 260rpx;
+  margin-left: 14rpx;
+background-color:#F5F8FF ;
+border-radius: 20rpx;
+border: 1rpx solid #ADB7CA;
+font-size: 25rpx;
+padding:10rpx;
+color:#515F7D;
 }

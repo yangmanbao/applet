@@ -251,19 +251,30 @@
                   恭喜入手，点评一下吧！
                 </view>
                 <view>
-                <view style="margin: 20rpx;">
-                  模型评分
-                </view>
-                    <view wx:for="{{buttonList}}" wx:key="index" class="scoreBtns">
-                      <van-button  bind:click="selectScore" custom-style="width:51rpx;height:60rpx;margin-left:10rpx;background-color:{{isSelectScoreBtn == item.num ? '#409eff' : '#ADB7CA'}};" type="default" id="{{item.num}}" ><text style="font-size: 20rpx;color: #F6F9FE;">{{item.num}}</text></van-button>
-                    </view>
-                    <view class="scoreText">
-                      <text style="font-size: 25rpx;color:{{isSelectScoreBtn == 1 ? '#409eff' :'#ADB7CA'}} ;">避雷不推荐</text>
+                  <view style="margin: 20rpx;">
+                    模型评分
+                  </view>
+                  <view wx:for="{{buttonList}}" wx:key="index" class="scoreBtns">
+                    <van-button bind:click="selectScore" custom-style="width:51rpx;height:60rpx;margin-left:10rpx;background-color:{{isSelectScoreBtn == item.num ? '#409eff' : '#ADB7CA'}};" type="default" id="{{item.num}}"><text style="font-size: 20rpx;color: #F6F9FE;">{{item.num}}</text></van-button>
+                  </view>
+                  <view class="scoreText">
+                    <text style="font-size: 25rpx;color:{{isSelectScoreBtn == 1 ? '#409eff' :'#ADB7CA'}} ;">避雷不推荐</text>
                     <text style="font-size: 25rpx;color:{{isSelectScoreBtn == 5 ? '#409eff' :'#ADB7CA'}} ;margin-left: -95rpx;">一般</text>
                     <text style="font-size: 25rpx;color:{{isSelectScoreBtn == 10 ? '#409eff' :'#ADB7CA'}} ;">非常推荐</text>
-                    </view>
-                 
-              
+                  </view>
+                  <view style="margin: 20rpx;">
+                    模型点评
+                  </view>
+                  <textarea value="{{ modelReviewValue }}" bindblur="onModelReviewChange" class="modelReview" 	auto-focus/>
+                  <view style="margin: 20rpx;">
+                  模型实物图
+                  </view>
+                  <van-uploader file-list="{{ modelImgFileList }}" style="margin: 20rpx;"deletable="{{ true }}" />
+                  <view style="margin-left: 160rpx;">
+                    <van-button type="info" round custom-style="width:200rpx" bindtap="updateReview">更新评价</van-button>
+
+                    <van-button type="default" round custom-style="width:200rpx;margin-left:20rpx" bindtap="cancelReview">取消</van-button>
+                  </view>
                 </view>
               </view>
             </view>
