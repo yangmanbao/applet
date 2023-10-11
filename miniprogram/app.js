@@ -16,7 +16,7 @@ App({
     that.globalData.menuBottom = menuButtonInfo.top - systemInfo.statusBarHeight;
     that.globalData.menuHeight = menuButtonInfo.height;
     const resdata = wx.getMenuButtonBoundingClientRect();
-    console.log(resdata, 'resdata')
+    // console.log(resdata, 'resdata')
     this.globalData.menuButtonTop = resdata.top;
     this.globalData.menuButtonHeight = resdata.height
     this.globalData.menuButtonBottom = resdata.bottom

@@ -41,46 +41,76 @@
                   <text class="{{selectNew?'selectNewText':'newText'}}">最新</text>
                 </van-button>
               </view>
-              <!-- <view wx:for="{{modelList}}" wx:key="index" style="display: inline;">
-                <view class="modelMsg">
-                  <van-image width="6rem" height="6rem" fit="cover" src="{{item.img}}" />
-                  <view style="font-size: 25rpx;font-weight: 700;">{{item.name}}</view>
-                  <view style="font-size: 23rpx;margin-top: 5rpx;">
-                    评分{{item.score}}<text style="color:#9CA5B6;margin-left: 10rpx;"> {{item.peopleNum}}人想要</text>
-                  </view>
-                </view>
-              </view> -->
               <van-row>
                 <view wx:for="{{modelList}}" wx:key="index">
-                <van-col span="8" bindtap="changePage">
-                <view style="margin-bottom:20rpx;margin-left: 23rpx;">
-                  <van-image width="6rem" height="6rem" fit="cover" src="{{item.img}}" />
-                  <view style="font-size: 25rpx;font-weight: 700;">{{item.name}}</view>
-                  <view style="font-size: 23rpx;margin-top: 5rpx;">
-                    评分{{item.score}}<text style="color:#9CA5B6;margin-left: 10rpx;"> {{item.peopleNum}}人想要</text>
-                  </view>
-                </view>
-              
-                </van-col>
-              </view>
-              </van-row>
-           
-              <!-- <view class="modelMsg">
-                <van-image width="6rem" height="6rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="td-sign" />
-                <view style="font-size: 25rpx;font-weight: 700;">霸王龙威尔逊</view>
-                <view style="font-size: 23rpx;margin-top: 5rpx;">
-                  评分7.5<text style="color:#9CA5B6;margin-left: 10rpx;"> xxx人想要</text>
-                </view>
-              </view> -->
-            </view>
+                  <van-col span="8" bindtap="changePage">
+                    <view style="margin-bottom:20rpx;margin-left: 23rpx;">
+                      <van-image width="6rem" height="6rem" fit="cover" src="{{item.img}}" />
+                      <view style="font-size: 25rpx;font-weight: 700;">{{item.name}}</view>
+                      <view style="font-size: 23rpx;margin-top: 5rpx;">
+                        评分{{item.score}}<text style="color:#9CA5B6;margin-left: 10rpx;"> {{item.peopleNum}}人想要</text>
+                      </view>
+                    </view>
 
+                  </van-col>
+                </view>
+              </van-row>
+            </view>
           </view>
         </view>
         <view wx:elif="{{currentTab == 'growth'}}">
-          <view id="growth">222</view>
+          <view id="growth">   <view style="background-color: #fff;width: 95%;margin: 18rpx;border-radius: 30rpx;">
+              <view style="padding: 20rpx; font-size: 30rpx;">
+                模型一览
+                <van-button type="default" size="small" color="{{selectPopular ? '#6BBFF9' : '#fff'}}" round bindtap="changePopular" class="popularest">
+                  <text class="{{selectPopular?'selectPopularText':'popularText'}}">评分</text>
+                </van-button>
+                <van-button type="default" size="small" color="{{selectNew ? '#6BBFF9' : '#fff'}}" round bindtap="changeNew" class="newest">
+                  <text class="{{selectNew?'selectNewText':'newText'}}">最新</text>
+                </van-button>
+              </view>
+              <van-row>
+                <view wx:for="{{modelList}}" wx:key="index">
+                  <van-col span="8" bindtap="changePage">
+                    <view style="margin-bottom:20rpx;margin-left: 23rpx;">
+                      <van-image width="6rem" height="6rem" fit="cover" src="{{item.img}}" />
+                      <view style="font-size: 25rpx;font-weight: 700;">{{item.name}}</view>
+                      <view style="font-size: 23rpx;margin-top: 5rpx;">
+                        评分{{item.score}}<text style="color:#9CA5B6;margin-left: 10rpx;"> {{item.peopleNum}}人想要</text>
+                      </view>
+                    </view>
+
+                  </van-col>
+                </view>
+              </van-row>
+            </view></view>
         </view>
         <view wx:elif="{{currentTab == 'museum'}}">
-          <view id="museum">333</view>
+          <view id="museum">   <view style="background-color: #fff;width: 95%;margin: 18rpx;border-radius: 30rpx;">
+              <view style="padding: 20rpx; font-size: 30rpx;">
+                模型一览
+                <van-button type="default" size="small" color="{{selectPopular ? '#6BBFF9' : '#fff'}}" round bindtap="changePopular" class="popularest">
+                  <text class="{{selectPopular?'selectPopularText':'popularText'}}">评分</text>
+                </van-button>
+                <van-button type="default" size="small" color="{{selectNew ? '#6BBFF9' : '#fff'}}" round bindtap="changeNew" class="newest">
+                  <text class="{{selectNew?'selectNewText':'newText'}}">最新</text>
+                </van-button>
+              </view>
+              <van-row>
+                <view wx:for="{{modelList}}" wx:key="index">
+                  <van-col span="8" bindtap="changePage">
+                    <view style="margin-bottom:20rpx;margin-left: 23rpx;">
+                      <van-image width="6rem" height="6rem" fit="cover" src="{{item.img}}" />
+                      <view style="font-size: 25rpx;font-weight: 700;">{{item.name}}</view>
+                      <view style="font-size: 23rpx;margin-top: 5rpx;">
+                        评分{{item.score}}<text style="color:#9CA5B6;margin-left: 10rpx;"> {{item.peopleNum}}人想要</text>
+                      </view>
+                    </view>
+
+                  </van-col>
+                </view>
+              </van-row>
+            </view></view>
         </view>
       </block>
 

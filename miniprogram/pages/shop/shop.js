@@ -1,8 +1,6 @@
 // pages/shop/shop.js
 const app = getApp()
-
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -11,7 +9,7 @@ Page({
     menuRight: app.globalData.menuRight,
     menuBottom: app.globalData.menuBottom,
     menuHeight: app.globalData.menuHeight,
-    currentTab: 'watchBrand',
+    currentTab: 'newModel',
     listdata: [
       {
         "id": "1",
@@ -111,6 +109,70 @@ Page({
         "modelNum": "7.5"
       },
     ],
+    monthModels:[
+      {
+        month:"5月",
+        year:"2023",
+        brands:[
+          {
+            image:'https://img.yzcdn.cn/vant/cat.jpeg',
+            modelName:'霸王龙',
+            brandName:'PNSO恐龙大王',
+            releaseTime:'2023.05.24',
+            isLike:true
+          },
+          {
+            image:'https://img.yzcdn.cn/vant/cat.jpeg',
+            modelName:'霸王龙',
+            brandName:'PNSO恐龙大王',
+            releaseTime:'2023.05.24',
+            isLike:false
+          },  {
+            image:'https://img.yzcdn.cn/vant/cat.jpeg',
+            modelName:'霸王龙',
+            brandName:'PNSO恐龙大王',
+            releaseTime:'2023.05.24',
+            isLike:true
+          },  {
+            image:'https://img.yzcdn.cn/vant/cat.jpeg',
+            modelName:'霸王龙',
+            brandName:'PNSO恐龙大王',
+            releaseTime:'2023.05.24',
+            isLike:true
+          },
+        ]
+      },
+      {
+        month:"4月",
+        year:"2023",
+        image:'https://img.yzcdn.cn/vant/cat.jpeg',
+        modelName:'霸王龙',
+        brandName:'PNSO恐龙大王',
+        releaseTime:'2023.05.24',
+        brands:[
+          {
+            image:'https://img.yzcdn.cn/vant/cat.jpeg',
+            modelName:'霸王龙',
+            brandName:'PNSO恐龙大王',
+            releaseTime:'2023.05.24',
+            isLike:true
+          },
+          {
+            image:'https://img.yzcdn.cn/vant/cat.jpeg',
+            modelName:'霸王龙',
+            brandName:'PNSO恐龙大王',
+            releaseTime:'2023.05.24',
+            isLike:true
+          },  {
+            image:'https://img.yzcdn.cn/vant/cat.jpeg',
+            modelName:'霸王龙',
+            brandName:'PNSO恐龙大王',
+            releaseTime:'2023.05.24',
+            isLike:false
+          },  
+        ],
+      }
+    ]
   },
   clickMenu: function (e) {
     var current = e.currentTarget.dataset.id //获取当前tab的index

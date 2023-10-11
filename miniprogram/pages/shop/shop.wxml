@@ -1,35 +1,57 @@
 <!--pages/shop/shop.wxml-->
 <view>
   <!-- 自定义导航栏 -->
-  <view class="nav-bar" style="height:{{navBarHeight}}px;background-color: #F6F9FE;">
+  <view class="nav-bar" style="height:{{navBarHeight}}px;background-color: #F6F9FE;position: fixed;width: 100%;top: 0px;z-index: 999;">
     <view class="title" style="height:{{menuHeight}}px;bottom:{{menuBottom}}px;line-height:{{menuHeight}}px;display: flex;">
       <view style="margin-left: 290rpx;font-size:35rpx;font-weight: bold;margin-top: 45rpx;">恐龙时光社</view>
     </view>
   </view>
-  <scroll-view class="mainParts" scroll-y>
+  <view class="mainParts" style="margin-top:{{navBarHeight}}px">
     <view class="tab stickyClass">
-      <view bindtap='clickMenu' class="tab-item {{currentTab == 'newModel' ? 'active' : ''}}" data-id="newModel" >最新模型</view>
-      <view bindtap='clickMenu' class="tab-item {{currentTab == 'watchBrand' ? 'active' : ''}}" data-id="watchBrand" >品牌一览</view>
+      <view bindtap='clickMenu' class="tab-item {{currentTab == 'newModel' ? 'active' : ''}}" data-id="newModel">最新模型</view>
+      <view bindtap='clickMenu' class="tab-item {{currentTab == 'watchBrand' ? 'active' : ''}}" data-id="watchBrand">品牌一览</view>
     </view>
-    <view   hidden="{{!(currentTab == 'newModel')}}">
-      111111
-    </view>
-    <view  hidden="{{!(currentTab == 'watchBrand')}}">
-        <!-- 表格主题 -->
-    <view class="table">
-      <view class="trNav">
-        <view class="th-sign">标志</view>
-        <view class="th-brand">品牌名称</view>
-        <view class="th-modelNum">模型数</view>
-      </view>
-      <block>
-        <view class="tr" wx:for="{{listdata}}" wx:key="index" bindtap="brandDetailPage">
-          <van-image  width="2.8rem" height="2.8rem" fit="cover" src="{{item.sign}}" class="td-sign" />
-          <view class="td-brand">{{item.brand}}</view>
-          <view class="td-modelNum">{{item.modelNum}}</view>
+    <view hidden="{{!(currentTab == 'newModel')}}">
+      <view style="margin:35rpx;" wx:for="{{monthModels}}" wx:key="index" wx:for-item="dateItem">
+        <text style="color:#5687F6;font-size: small;font-weight: 600;margin-left: 10rpx;">{{dateItem.month}}</text>
+        <text style="font-size: small;color:#9CA5B6">/{{dateItem.year}}</text>
+        <view class="modelsMsg">
+          <view style="padding:30rpx;margin-top: -10rpx;" wx:for="{{dateItem.brands}}" wx:for-item="barndItem" wx:key="{{barndItem.index}}">
+            <van-image width="3.8rem" height="3.8rem" fit="cover" src="{{barndItem.image}}" />
+            <view style="margin-top:-130rpx;margin-left: 140rpx;font-weight: 700;">{{barndItem.modelName}}</view>
+            <view style="margin-top:10rpx;margin-left: 140rpx;font-size: 23rpx;color:#515F7D;">{{barndItem.brandName}}</view>
+            <view style="margin-top: 15rpx;margin-left: 140rpx;font-size: 20rpx;color:#9CA5B6;">{{barndItem.releaseTime}}</view>
+            <block>
+              <view style="margin-top:-90rpx;float: right;" wx:if="{{barndItem.isLike}}">
+              <van-button round size="small" color="skyBlue">想入</van-button>
+            </view>
+            <view style="margin-top:-90rpx;float: right;" wx:else>
+              <van-button round size="small" color="#9CA5B6">已入</van-button>
+            </view>
+            </block>
+            <!-- <view style="margin-top:-90rpx;float: right;" wx:if="{{barndItem.isLike}}">
+              <van-button round size="small" color="skyBlue">想入</van-button>
+            </view> -->
+          </view>
         </view>
-      </block>
+      </view>
     </view>
+    <view hidden="{{!(currentTab == 'watchBrand')}}">
+      <!-- 表格主题 -->
+      <view class="table">
+        <view class="trNav">
+          <view class="th-sign">标志</view>
+          <view class="th-brand">品牌名称</view>
+          <view class="th-modelNum">模型数</view>
+        </view>
+        <block>
+          <view class="tr" wx:for="{{listdata}}" wx:key="index" bindtap="brandDetailPage">
+            <van-image width="2.8rem" height="2.8rem" fit="cover" src="{{item.sign}}" class="td-sign" />
+            <view class="td-brand">{{item.brand}}</view>
+            <view class="td-modelNum">{{item.modelNum}}</view>
+          </view>
+        </block>
+      </view>
     </view>
-  </scroll-view>
+  </view>
 </view>

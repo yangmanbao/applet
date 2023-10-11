@@ -118,3 +118,10 @@
   margin-right:20rpx ;
   padding-right: 30rpx;
 }
+
+.modelsMsg{
+
+  background-color: #fff;
+border-radius: 30rpx;
+margin-top: 20rpx;
+}

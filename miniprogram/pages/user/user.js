@@ -8,11 +8,154 @@ Page({
     userInfo: {},
     isLogin: 0,
     active:1,
+    isAdmini:true,
     navBarHeight: app.globalData.navBarHeight,
     menuRight: app.globalData.menuRight,
     menuBottom: app.globalData.menuBottom,
     menuHeight: app.globalData.menuHeight,
+    currentTab: 'wanted',
+    modelLikeList:[
+      {
+        image:'https://img.yzcdn.cn/vant/cat.jpeg',
+        modelName:'霸王龙威尔逊',
+        score:'5',
+        purchasingDate:'2023-05-16 10:23',
+        myRate:"用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价",
+        isLike:true
+      },
+      {
+        image:'https://img.yzcdn.cn/vant/cat.jpeg',
+        modelName:'霸王龙威尔逊',
+        score:'5',
+        purchasingDate:'2023-05-16 10:23',
+        myRate:"用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价",
+        isLike:true
+      },
+      {
+        image:'https://img.yzcdn.cn/vant/cat.jpeg',
+        modelName:'霸王龙威尔逊',
+        score:'5',
+        purchasingDate:'2023-05-16 10:23',
+        myRate:"用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价",
+        isLike:true
+      },
+      {
+        image:'https://img.yzcdn.cn/vant/cat.jpeg',
+        modelName:'霸王龙威尔逊',
+        score:'5',
+        purchasingDate:'2023-05-16 10:23',
+        myRate:"用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价",
+        isLike:true
+      },
+      {
+        image:'https://img.yzcdn.cn/vant/cat.jpeg',
+        modelName:'霸王龙威尔逊',
+        score:'5',
+        purchasingDate:'2023-05-16 10:23',
+        myRate:"用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价",
+        isLike:true
+      },
+      {
+        image:'https://img.yzcdn.cn/vant/cat.jpeg',
+        modelName:'霸王龙威尔逊',
+        score:'5',
+        purchasingDate:'2023-05-16 10:23',
+        myRate:"用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价",
+        isLike:true
+      },
+      {
+        image:'https://img.yzcdn.cn/vant/cat.jpeg',
+        modelName:'霸王龙威尔逊',
+        score:'5',
+        purchasingDate:'2023-05-16 10:23',
+        myRate:"用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价",
+        isLike:true
+      },
+    ],
+    modelPurchasedList:[
+      {
+        image:'https://img.yzcdn.cn/vant/cat.jpeg',
+        modelName:'霸王龙威尔逊',
+        score:'5',
+        purchasingDate:'2023-05-16 10:23',
+        myRate:"用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价",
+        isLike:true,
+        isPurchased:true
+      },
+      {
+        image:'https://img.yzcdn.cn/vant/cat.jpeg',
+        modelName:'霸王龙威尔逊',
+        score:'5',
+        purchasingDate:'2023-05-16 10:23',
+        myRate:"用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价",
+        isLike:true,
+        isPurchased:true
+      },
+      {
+        image:'https://img.yzcdn.cn/vant/cat.jpeg',
+        modelName:'霸王龙威尔逊',
+        score:'5',
+        purchasingDate:'2023-05-16 10:23',
+        myRate:"用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价",
+        isLike:true,
+        isPurchased:true,
+        isPurchased:true
+      },
+      {
+        image:'https://img.yzcdn.cn/vant/cat.jpeg',
+        modelName:'霸王龙威尔逊',
+        score:'5',
+        purchasingDate:'2023-05-16 10:23',
+        myRate:"用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价",
+        isLike:true,
+        isPurchased:true
+      },
+      {
+        image:'https://img.yzcdn.cn/vant/cat.jpeg',
+        modelName:'霸王龙威尔逊',
+        score:'5',
+        purchasingDate:'2023-05-16 10:23',
+        myRate:"用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价",
+        isLike:true,
+        isPurchased:true
+      },
+      {
+        image:'https://img.yzcdn.cn/vant/cat.jpeg',
+        modelName:'霸王龙威尔逊',
+        score:'5',
+        purchasingDate:'2023-05-16 10:23',
+        myRate:"用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价",
+        isLike:true,
+        isPurchased:true
+      },
+      {
+        image:'https://img.yzcdn.cn/vant/cat.jpeg',
+        modelName:'霸王龙威尔逊',
+        score:'5',
+        purchasingDate:'2023-05-16 10:23',
+        myRate:"用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价",
+        isLike:true,
+        isPurchased:true
+      },
+    ]
   },
+  changePage(){
+    wx.navigateTo({
+      url: '/pages/detailsPage/detailsPage',
+    })
+  },
+  changeMyModelPage(){
+    wx.navigateTo({
+      url: '/pages/myModel/myModel',
+    })
+  },
+  clickMenu: function (e) {
+    var current = e.currentTarget.dataset.id //获取当前tab的index
+    this.setData({
+        currentTab: current,
+    })
+    console.log(current);
+}, 
   bindGetUserInfo:function(e){
    console.log("get user info btn clicked")
    let headimg = e.detail.avatarUrl

@@ -6,22 +6,26 @@
 }
 .swiper-container{
   height: calc(100vh-'{{navBarHeight}}px');
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .user-view1{
-    height: 250rpx;
+    height: 350rpx;
     width: 100%;
+    background-color: #4098fc;
 }
 #id-user-view1{
     display: flex
   }
-  .mine-userinfo-name,
+  .mine-userinfo-name{
+    font-size: 45rpx;
+    color: white;
+    margin-top: -40%;
+  }
   .mine-userinfo-name1{
     font-size: 45rpx;
     color: white;
-  }
-  .mine-userinfo-name1{
-    margin-top: 20%;
   }
   .mine-userinfo-msg{
     font-size: 30rpx;
@@ -42,6 +46,8 @@
   }
   
   .mine-nouserinfo-avatar-btn {
+    margin-top: -70%;
+
     width: 128rpx;
     height: 128rpx;
     border-radius: 50%;
@@ -77,8 +83,7 @@
 .detailCard{
     width: 200rpx;
     height: 300rpx;
-    border-radius: 10rpx;
-    margin:10rpx;
+    margin:20rpx;
 }
 
 .detailCardText{
@@ -87,4 +92,48 @@
     font-size: small;
     background-color: white;
     margin-top: -10rpx;
+}
+.stickyClass {
+  position: sticky;
+  top: 70rpx;
+  /*//距离顶部还有多少时候产生吸顶效果 */
+  z-index: 9999;
+}
+
+.tab {
+  width: 100%;
+  top: 120rpx;
+  left: 0;
+  z-index: 100;
+  white-space: nowrap;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 80rpx;
+  background: #fff;
+  padding-left: 3%;
+  padding-right: 3%;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  margin-top: -10%;
+}
+
+.tab-item {
+  display: inline-block;
+  text-align: center;
+  font-size: 30rpx;
+  z-index: 999;
+  margin-left: 80rpx;
+  margin-right: 130rpx;
+  color:#9CA5B6
+}
+.active {
+  border-bottom: 5rpx solid #5687F6;
+  color: #5687F6;
+  font-weight: bold;
+}
+
+.scroll-two ::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
 }

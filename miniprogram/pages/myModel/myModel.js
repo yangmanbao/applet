@@ -1,4 +1,4 @@
-// pages/webmasterCentral/webmasterCentral.js
+// pages/myModel/myModel.js
 const app = getApp()
 Page({
 
@@ -6,31 +6,15 @@ Page({
      * 页面的初始数据
      */
     data: {
-        navBarHeight: app.globalData.navBarHeight,
-        menuRight: app.globalData.menuRight,
-        menuBottom: app.globalData.menuBottom,
-        menuHeight: app.globalData.menuHeight,
+      navBarHeight: app.globalData.navBarHeight,
+      menuRight: app.globalData.menuRight,
+      menuBottom: app.globalData.menuBottom,
+      menuHeight: app.globalData.menuHeight,
     },
-    backBtn(){
-        // console.log(1111);
-        wx.navigateBack({
-            delta:1
-        })
-    },
-    brandManage(){
-        wx.navigateTo({ 
-            url: '/pages/brandManagePage/brandManagePage'
-        })
-    },
-    manager(){
-        wx.navigateTo({ 
-            url: '/pages/managerPage/managerPage'
-        })
-    },
-    blackList(){
-        wx.navigateTo({ 
-            url: '/pages/blacklistPage/blacklistPage'
-        })
+    backBtn() {
+      wx.navigateBack({
+        delta: 1
+      })
     },
     /**
      * 生命周期函数--监听页面加载

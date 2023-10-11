@@ -1,10 +1,12 @@
 {
   "pages": [
-    "pages/brandDetail/brandDetail",
+    "pages/user/user",
+    "pages/myModel/myModel",
+
     "pages/shop/shop",
+    "pages/brandDetail/brandDetail",
     "pages/home/home",
     "pages/detailsPage/detailsPage",
-    "pages/user/user",
     "pages/editBrandPage/editBrandPage",
     "pages/brandManagePage/brandManagePage",
     "pages/webmasterCentral/webmasterCentral",

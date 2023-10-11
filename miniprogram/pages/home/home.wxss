@@ -1,6 +1,7 @@
 /* pages/home/home.wxss */
 .mainParts {
   background-color: #F6F9FE;
+
 }
 
 .mainText1,

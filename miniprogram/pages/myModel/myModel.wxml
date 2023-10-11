@@ -1,0 +1,12 @@
+<!--pages/myModel/myModel.wxml-->
+<view>
+  <view class="nav-bar" style="height:{{navBarHeight}}px;background:#F6F9FE;position: fixed;width: 100%;top: 0px;z-index: 999;">
+    <view class="title" style="height:{{menuHeight}}px;bottom:{{menuBottom}}px;line-height:{{menuHeight}}px;display: flex;justify-content:space-between">
+      <van-icon name="arrow-left" size="30px" style="margin-top: 80rpx;" bindtap="backBtn" />
+      <view style="margin-top: 45rpx; font-size:35rpx">霸王龙威尔逊</view>
+      <view style="width: 60rpx;height: 10rpx;"></view>
+    </view>
+  </view>
+  <view  style="margin-top:{{navBarHeight}}px">
+  </view>
+</view>

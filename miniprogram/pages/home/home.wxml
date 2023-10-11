@@ -1,12 +1,12 @@
 <!--pages/home/home.wxml-->
 <view>
   <!-- 自定义导航栏 -->
-  <view class="nav-bar" style="height:{{navBarHeight}}px;background-color: #F6F9FE;">
+  <view class="nav-bar" style="height:{{navBarHeight}}px;background-color: #F6F9FE;position: fixed;width: 100%;top: 0px;z-index: 999;">
     <view class="title" style="height:{{menuHeight}}px;bottom:{{menuBottom}}px;line-height:{{menuHeight}}px;display: flex;">
       <view style="margin-left: 285rpx;font-size:35rpx;font-weight: bold;margin-top: 45rpx;">恐龙时光社</view>
     </view>
   </view>
-  <view class="mainParts">
+  <view class="mainParts" style="margin-top:{{navBarHeight}}px">
     <view style="display: flex;" >
     <view>
       <view class="mainText1">恐龙时光社</view>
