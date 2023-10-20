@@ -1,1 +1,190 @@
 /* pages/myModel/myModel.wxss */
+.navBox {
+  height: 300rpx;
+  width: 100%;
+  background-color: #4098fc;
+}
+
+.modelCardNav {
+  display: flex;
+  height: 400rpx;
+  width: 90%;
+  background-color: #fff;
+  margin-left: 5%;
+  border-radius: 20rpx;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  margin-top: 2%;
+}
+
+.modelText {
+  font-weight: bold;
+}
+
+.mainParts {
+  background-image: url('https://i.hd-r.cn/6c549035da64cf12f8d8b6a34c578ecb.png');
+  width: 100%;
+  height: 1225rpx;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+}
+
+.modelTimeText {
+  font-size: 30rpx;
+  color: #5687F6;
+}
+
+image {
+  position: absolute;
+  width: 101%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  display: block;
+  z-index: -999;
+}
+
+.rateParts {
+  background-color: #fff;
+  width: 90%;
+  border-radius: 20rpx;
+  margin-left: 5%;
+
+}
+
+.rate {
+  margin-top: 5%;
+  width: 90%;
+  background-color: #fff;
+  border-radius: 30rpx;
+  margin-left: 2%;
+}
+
+.rateText {
+  width: 90%;
+  background-color: #fff;
+  margin-left: 3%;
+  color: #2e3e63;
+}
+
+.wrapper{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100vh;
+}
+
+.block {
+  width: 100%;
+  height: 80%;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  background-color: #fff;
+}
+
+.editPageNav {
+  height: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3%;
+  font-size: larger;
+  font-weight:600;
+  color:#fff;
+  background-color: #409eff;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+}
+
+.scoreBtns{
+  display: inline;
+  align-items:center;
+  justify-content: center;
+  font-size: 20rpx;
+}
+.scoreText{
+  padding:2%;
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+}
+
+.modelReview {
+  width: 93%;
+  height: 260rpx;
+  margin-left: 2%;
+  background-color: #F5F8FF;
+  border-radius: 20rpx;
+  border: 1rpx solid #ADB7CA;
+  font-size: 25rpx;
+  padding: 1%;
+  color: #515F7D;
+}
+
+.ratePart {
+  width: 95%;
+  margin: 3%;
+  margin-top:6%;
+}
+
+
+.topIntroduct {
+  width: 100%;
+}
+
+.topIntroduct .text {
+  /* //文本的view实现父级的相对定位，并实现省略号 */
+  width: 90%;
+  margin: 2% auto;
+  line-height: 180%;
+  color: #64676e;
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  /*//设置超出几行省略内容*/
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.fold::before {
+  /* //设置在文本下面的展开按钮那一部分，此部分的前面设置——...省略号，并通过绝对定位设置在超出部分的后面*/
+  content: attr(data-etc);
+  position: absolute;
+  left: 0;
+  bottom: -2%;
+  transform: translateX(4rpx);
+
+}
+
+.fold::after {
+  /*//设置文本下面的展开按钮的那一部分，此部分的后面设置——展开  展开按钮，并通过绝对定位设置在省略号的后面*/
+  content: attr(data-text);
+  position: absolute;
+  bottom: -30%;
+  right: 0;
+  color: #409eff;
+}
+
+.fold {
+  /*//展开按钮的那一部分，同样设置绝对定位，并设置宽高，将通过样式实现的省略号遮住，同时将::before和::after展开的内容设置在里面*/
+  width: 20%;
+  height: 35rpx;
+  margin-top: 10%;
+  position: absolute;
+  right: 0;
+  bottom: 10rpx;
+  background-color: #fff;
+}
+
+.foldIntroduct {
+  /*//出现此样式名时，设置不出现省略号和展开按钮*/
+  -webkit-line-clamp: inherit !important;
+}
+.rateImg {
+  margin-left: 2%;
+}

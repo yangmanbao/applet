@@ -1,12 +1,105 @@
 <!--pages/myModel/myModel.wxml-->
 <view>
-  <view class="nav-bar" style="height:{{navBarHeight}}px;background:#F6F9FE;position: fixed;width: 100%;top: 0px;z-index: 999;">
+  <view class="nav-bar" style="height:{{navBarHeight}}px;background:#4098fc;position: fixed;width: 100%;top: 0px;z-index: 999;">
     <view class="title" style="height:{{menuHeight}}px;bottom:{{menuBottom}}px;line-height:{{menuHeight}}px;display: flex;justify-content:space-between">
-      <van-icon name="arrow-left" size="30px" style="margin-top: 80rpx;" bindtap="backBtn" />
-      <view style="margin-top: 45rpx; font-size:35rpx">霸王龙威尔逊</view>
+      <van-icon name="arrow-left" size="30px" style="margin-top: 80rpx;" bindtap="backBtn" color="#fff" />
+      <view style="margin-top: 45rpx; font-size:35rpx;color: #fff;">霸王龙威尔逊</view>
       <view style="width: 60rpx;height: 10rpx;"></view>
     </view>
   </view>
-  <view  style="margin-top:{{navBarHeight}}px">
+  <view class="mainParts" style="margin-top:{{navBarHeight}}px;">
+    <view class="modelCardNav">
+      <view>
+        <van-image width="5rem" height="5rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="td-sign" />
+      </view>
+      <view class="modelText">霸王龙威尔逊1111111111</view>
+      <view class="modelTimeText">2023-05-16 10:30 拥有</view>
+    </view>
+    <view class="rateParts">
+      <view class="rate">
+        <view class="rateText">
+          我的评分与点评
+        </view>
+        <view style="margin-top:-7% ;margin-left: 98%;">
+          <van-icon name="ellipsis" bindtap="openSelect" />
+        </view>
+        <view class="ratePart">
+          <van-image round width="2.8rem" height="2.8rem" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg"></van-image>
+          <view style="margin-left: 20%;margin-top: -16%;">用户账户名</view>
+          <view style="margin-left: 20%;margin-top:2%;font-size: small;color: darkgray;">2023-09-12 10:35</view>
+          <view style="color: darkgray;font-size: 25rpx;margin-top: -16%;float: right;">
+            非常推荐
+            <text style="color: black;font-size: medium;">9.0分</text>
+          </view>
+          <view style="margin-top: -8%; float: right;">
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+            <van-icon name="star" color="#FE8D19" />
+          </view>
+          <view class="topIntroduct">
+            <view class="text {{introductFlag ?'foldIntroduct':''}} ">
+              <!-- {{bookDetailData.bookIntroduct}} -->
+              用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价用户评价
+              <view class="fold" bindtap="fold" data-text="{{foldText}}" data-etc="{{textEtc}}"></view>
+            </view>
+          </view>
+          <scroll-view scroll-x>
+            <view style="display: flex;">
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+              <van-image width="100" height="100" fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="rateImg"></van-image>
+            </view>
+          </scroll-view>
+          <block>
+            <view wx:if="isLike">
+              <van-icon name="{{isLike ? 'good-job' :'good-job-o'}} " color="{{isLike?'#4083F5' :''}}" size="50rpx" bindtap="{{isLike ? 'cancelLike' :'onLike'}}" />
+              <text style="color:{{isLike ? '#4083F5' :''}}">123</text>
+            </view>
+          </block>
+        </view>
+        <van-action-sheet show="{{ showActionSheet }}" bind:select="onSelectActionSheet" bind:cancel="onActionSheetClose" actions="{{ actions }}" bind:close="onActionSheetClose" cancel-text="取消" close-on-click-overlay="true" />
+        <van-dialog use-slot show="{{ showDelRate }}" show-cancel-button bind:cancel="onDelRateCancel" bind:getuserinfo="getUserInfo" bind:confirm="delRate">
+          <view style="text-align: center;margin-top: 5%;margin-bottom:5%;font-size: 40rpx;">确定删除该评论吗？</view>
+        </van-dialog>
+        <van-overlay show="{{ showEditRate }}" bind:click="onEditRateClose" z-index="9999" lock-scroll>
+          <view class="wrapper">
+            <view class="block" catch:tap="noop">
+              <view class="editPageNav">
+                恭喜入手，点评一下吧！
+              </view>
+              <view>
+                <view style="margin: 3%;">
+                  模型评分
+                </view>
+                <view wx:for="{{buttonList}}" wx:key="index" class="scoreBtns">
+                  <van-button bind:click="selectScore" custom-style="width:5%;height:8%;margin-left:1.3%;background-color:{{isSelectScoreBtn == item.num ? '#409eff' : '#ADB7CA'}};" type="default" id="{{item.num}}"><text style="font-size: 20rpx;color: #F6F9FE;">{{item.num}}</text></van-button>
+                </view>
+                <view class="scoreText">
+                  <text style="font-size: 25rpx;color:{{isSelectScoreBtn == 1 ? '#409eff' :'#ADB7CA'}} ;">避雷不推荐</text>
+                  <text style="font-size: 25rpx;color:{{isSelectScoreBtn == 5 ? '#409eff' :'#ADB7CA'}} ;margin-left: -15%;">一般</text>
+                  <text style="font-size: 25rpx;color:{{isSelectScoreBtn == 10 ? '#409eff' :'#ADB7CA'}} ;">非常推荐</text>
+                </view>
+                <view style="margin: 3%;">
+                  模型点评
+                </view>
+                <textarea value="{{ modelReviewValue }}" bindblur="onModelReviewChange" class="modelReview" auto-focus />
+                <view style="margin: 3%;">
+                  模型实物图
+                </view>
+                <van-uploader file-list="{{ modelImgFileList }}" style="margin: 3%;" deletable="{{ true }}" />
+                <view style="margin-left:22%;">
+                  <van-button type="info" round custom-style="width:35%" bindtap="updateReview">更新评价</van-button>
+                  <van-button type="default" round custom-style="width:35%;margin-left:3%" bindtap="cancelReview">取消</van-button>
+                </view>
+              </view>
+            </view>
+          </view>
+        </van-overlay>
+      </view>
+    </view>
   </view>
 </view>
