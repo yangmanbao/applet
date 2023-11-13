@@ -24,6 +24,16 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        if(res.code){
+          wx.request({
+            url: 'https://koa-h1tf-69049-4-1316755004.sh.run.tcloudbase.com',
+            data:{
+              code:res.code
+            }
+          })
+        }else{
+          console.log('登录失败!'+ res.errMsg);
+        }
       }
     })
     // init 云接口

@@ -1,7 +1,7 @@
-/* pages/home/home.wxss */
 .mainParts {
   background-color: #F6F9FE;
-
+  /* height: calc(100vh - '{{navBarHeight}}px'); */
+  height: calc(100vh - 60px);
 }
 
 .mainText1,
@@ -17,6 +17,8 @@
 }
 
 .table {
+  
+  margin-bottom: 20rpx;
   border: 0px solid rgb(116, 115, 115);
   font-size: 12px;
   background-color: #F6F9FE;
@@ -28,7 +30,9 @@
   justify-content: center;
   height: 4rem;
   align-items: center;
+  margin-top: -4%;
 }
+
 .tr {
   display: flex;
   width: 90%;
@@ -48,7 +52,6 @@
 }
 .td-arter{
   width:20%;
-  /* margin-left: 100rpx; */
   justify-content: center;
   text-align: center;
 }

@@ -46,9 +46,9 @@
         </view>
         <block>
           <view class="tr" wx:for="{{listdata}}" wx:key="index" bindtap="brandDetailPage">
-            <van-image width="2.8rem" height="2.8rem" fit="cover" src="{{item.sign}}" class="td-sign" />
-            <view class="td-brand">{{item.brand}}</view>
-            <view class="td-modelNum">{{item.modelNum}}</view>
+            <!-- <van-image width="2.8rem" height="2.8rem" fit="cover" src="{{item.id}}" class="td-sign" /> -->
+            <view class="td-brand">{{item.brandName}}</view>
+            <view class="td-modelNum">{{item.status}}</view>
           </view>
         </block>
       </view>

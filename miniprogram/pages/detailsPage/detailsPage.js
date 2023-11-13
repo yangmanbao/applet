@@ -202,6 +202,9 @@ Page({
     this.setData({
       height: windowHeight
     });
+
+    
+
   },
   addWant() {
     this.setData({
